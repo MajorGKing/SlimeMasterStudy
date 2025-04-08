@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MonsterPrefabs
+  m_EditorClassIdentifier: 
+  m_GroupName: MonsterPrefabs
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8efeb521ce5eb424ab2e22d020f2b1da
+  m_SerializeEntries:
+  - m_GUID: cc075a064dfda1a4f8304e2ff51e9615
+    m_Address: BossPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90166ef226e57a843956a3362e5fe25d
+    m_Address: ElitePrefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eeaf616d5fc849d4cbf134a6f1206c06
+    m_Address: MonsterPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9094f0f0595c6e147aa68a6f81e2dcaf, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 527fd5de48141d14197daeee2557d35e, type: 2}
+    - {fileID: 11400000, guid: 76d51c9bf9697034ea79d4979985852f, type: 2}
