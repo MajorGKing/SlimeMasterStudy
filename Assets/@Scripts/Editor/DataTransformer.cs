@@ -18,6 +18,27 @@ public class DataTransformer : EditorWindow
     [MenuItem("Tools/ParseExcel _F4")]  // 추가 단축키: Control + K
     public static void ParseExcelDataToJson()
     {
+        ParseExcelDataToJson<AccountPassDataLoader, AccountPassData>("AccountPass");
+        ParseExcelDataToJson<AchievementDataLoader, AchievementData>("Achievement");
+        ParseExcelDataToJson<BattlePassDataLoader, BattlePassData>("BattlePass");
+        ParseExcelDataToJson<CheckOutDataLoader, CheckOutData>("CheckOut");
+        ParseExcelDataToJson<CreatureDataLoader, CreatureDataInternal>("Creature");
+        ParseExcelDataToJson<DailyShopDataLoader, DailyShopData>("DailyShop");
+        ParseExcelDataToJson<DropItemDataLoader, DropItemData>("DropItem");
+        ParseExcelDataToJson<EquipmentDataLoader, EquipmentData>("Equipment");
+        ParseExcelDataToJson<EquipmentLevelDataLoader, EquipmentLevelData>("EquipmentLevel");
+        ParseExcelDataToJson<GachaDataLoader, GachaTableData>("GachaTable");
+        ParseExcelDataToJson<LevelDataLoader, LevelData>("Level");
+        ParseExcelDataToJson<MaterialDataLoader, MaterialData>("Material");
+        ParseExcelDataToJson<MissionDataLoader, MissionData>("Mission");
+        ParseExcelDataToJson<OfflineRewardDataLoader, OfflineRewardData>("OfflineReward");
+        ParseExcelDataToJson<SkillDataLoader, SkillData>("Skill");
+        ParseExcelDataToJson<StageDataLoader, StageDataInternal>("Stage");
+        ParseExcelDataToJson<StagePackageDataLoader, StagePackageData>("StagePackage");
+        ParseExcelDataToJson<SupportSkillDataLoader, SupportSkillDataInternal>("SupportSkill");
+
+        ParseExcelDataToJson<WaveDataLoader, WaveDataInternal>("Wave");
+
         Debug.Log("Complete DataTransformer");
     }
 

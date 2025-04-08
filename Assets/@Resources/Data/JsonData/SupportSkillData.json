@@ -1,7 +1,6 @@
 {
   "supportSkills": [
     {
-      "AcquiredLevel": 0,
       "DataId": 20101,
       "SupportSkillType": 0,
       "SupportSkillName": 0,
@@ -32,12 +31,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20102,
       "SupportSkillType": 0,
       "SupportSkillName": 0,
@@ -68,12 +64,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20103,
       "SupportSkillType": 0,
       "SupportSkillName": 0,
@@ -104,12 +97,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20104,
       "SupportSkillType": 0,
       "SupportSkillName": 0,
@@ -140,12 +130,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20201,
       "SupportSkillType": 0,
       "SupportSkillName": 1,
@@ -176,12 +163,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20202,
       "SupportSkillType": 0,
       "SupportSkillName": 1,
@@ -212,12 +196,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20203,
       "SupportSkillType": 0,
       "SupportSkillName": 1,
@@ -248,12 +229,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20204,
       "SupportSkillType": 0,
       "SupportSkillName": 1,
@@ -284,12 +262,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20301,
       "SupportSkillType": 0,
       "SupportSkillName": 2,
@@ -320,12 +295,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20302,
       "SupportSkillType": 0,
       "SupportSkillName": 2,
@@ -356,12 +328,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20303,
       "SupportSkillType": 0,
       "SupportSkillName": 2,
@@ -392,12 +361,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20304,
       "SupportSkillType": 0,
       "SupportSkillName": 2,
@@ -428,12 +394,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20401,
       "SupportSkillType": 0,
       "SupportSkillName": 3,
@@ -464,12 +427,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20402,
       "SupportSkillType": 0,
       "SupportSkillName": 3,
@@ -500,12 +460,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20403,
       "SupportSkillType": 0,
       "SupportSkillName": 3,
@@ -536,12 +493,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20404,
       "SupportSkillType": 0,
       "SupportSkillName": 3,
@@ -572,12 +526,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20501,
       "SupportSkillType": 0,
       "SupportSkillName": 4,
@@ -608,12 +559,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20502,
       "SupportSkillType": 0,
       "SupportSkillName": 4,
@@ -644,12 +592,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20503,
       "SupportSkillType": 0,
       "SupportSkillName": 4,
@@ -680,12 +625,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20504,
       "SupportSkillType": 0,
       "SupportSkillName": 4,
@@ -716,12 +658,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20601,
       "SupportSkillType": 0,
       "SupportSkillName": 5,
@@ -752,12 +691,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20602,
       "SupportSkillType": 0,
       "SupportSkillName": 5,
@@ -788,12 +724,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20603,
       "SupportSkillType": 0,
       "SupportSkillName": 5,
@@ -824,12 +757,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20604,
       "SupportSkillType": 0,
       "SupportSkillName": 5,
@@ -860,12 +790,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20701,
       "SupportSkillType": 0,
       "SupportSkillName": 6,
@@ -896,12 +823,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20702,
       "SupportSkillType": 0,
       "SupportSkillName": 6,
@@ -932,12 +856,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20703,
       "SupportSkillType": 0,
       "SupportSkillName": 6,
@@ -968,12 +889,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20704,
       "SupportSkillType": 0,
       "SupportSkillName": 6,
@@ -1004,12 +922,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20801,
       "SupportSkillType": 0,
       "SupportSkillName": 7,
@@ -1040,12 +955,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20802,
       "SupportSkillType": 0,
       "SupportSkillName": 7,
@@ -1076,12 +988,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20803,
       "SupportSkillType": 0,
       "SupportSkillName": 7,
@@ -1112,12 +1021,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20804,
       "SupportSkillType": 0,
       "SupportSkillName": 7,
@@ -1148,12 +1054,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20901,
       "SupportSkillType": 0,
       "SupportSkillName": 8,
@@ -1184,12 +1087,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20902,
       "SupportSkillType": 0,
       "SupportSkillName": 8,
@@ -1220,12 +1120,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20903,
       "SupportSkillType": 0,
       "SupportSkillName": 8,
@@ -1256,12 +1153,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 20904,
       "SupportSkillType": 0,
       "SupportSkillName": 8,
@@ -1292,12 +1186,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21001,
       "SupportSkillType": 0,
       "SupportSkillName": 9,
@@ -1328,12 +1219,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21002,
       "SupportSkillType": 0,
       "SupportSkillName": 9,
@@ -1364,12 +1252,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21003,
       "SupportSkillType": 0,
       "SupportSkillName": 9,
@@ -1400,12 +1285,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21004,
       "SupportSkillType": 0,
       "SupportSkillName": 9,
@@ -1436,12 +1318,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21101,
       "SupportSkillType": 0,
       "SupportSkillName": 10,
@@ -1472,12 +1351,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21102,
       "SupportSkillType": 0,
       "SupportSkillName": 10,
@@ -1508,12 +1384,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21103,
       "SupportSkillType": 0,
       "SupportSkillName": 10,
@@ -1544,12 +1417,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21104,
       "SupportSkillType": 0,
       "SupportSkillName": 10,
@@ -1580,12 +1450,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21201,
       "SupportSkillType": 0,
       "SupportSkillName": 11,
@@ -1616,12 +1483,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 45.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 45.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21202,
       "SupportSkillType": 0,
       "SupportSkillName": 11,
@@ -1652,12 +1516,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21203,
       "SupportSkillType": 0,
       "SupportSkillName": 11,
@@ -1688,12 +1549,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21204,
       "SupportSkillType": 0,
       "SupportSkillName": 11,
@@ -1724,12 +1582,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21301,
       "SupportSkillType": 1,
       "SupportSkillName": 12,
@@ -1760,12 +1615,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21302,
       "SupportSkillType": 1,
       "SupportSkillName": 12,
@@ -1796,12 +1648,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21303,
       "SupportSkillType": 1,
       "SupportSkillName": 12,
@@ -1832,12 +1681,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21401,
       "SupportSkillType": 2,
       "SupportSkillName": 13,
@@ -1868,12 +1714,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21402,
       "SupportSkillType": 2,
       "SupportSkillName": 13,
@@ -1904,12 +1747,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21403,
       "SupportSkillType": 2,
       "SupportSkillName": 13,
@@ -1940,12 +1780,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21501,
       "SupportSkillType": 2,
       "SupportSkillName": 14,
@@ -1976,12 +1813,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21502,
       "SupportSkillType": 2,
       "SupportSkillName": 14,
@@ -2012,12 +1846,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21503,
       "SupportSkillType": 2,
       "SupportSkillName": 14,
@@ -2048,12 +1879,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21601,
       "SupportSkillType": 2,
       "SupportSkillName": 15,
@@ -2084,12 +1912,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21602,
       "SupportSkillType": 2,
       "SupportSkillName": 15,
@@ -2120,12 +1945,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21603,
       "SupportSkillType": 2,
       "SupportSkillName": 15,
@@ -2156,12 +1978,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21701,
       "SupportSkillType": 2,
       "SupportSkillName": 16,
@@ -2192,12 +2011,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21702,
       "SupportSkillType": 2,
       "SupportSkillName": 16,
@@ -2228,12 +2044,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21703,
       "SupportSkillType": 2,
       "SupportSkillName": 16,
@@ -2264,12 +2077,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21801,
       "SupportSkillType": 2,
       "SupportSkillName": 17,
@@ -2300,12 +2110,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21802,
       "SupportSkillType": 2,
       "SupportSkillName": 17,
@@ -2336,12 +2143,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21803,
       "SupportSkillType": 2,
       "SupportSkillName": 17,
@@ -2372,12 +2176,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21901,
       "SupportSkillType": 3,
       "SupportSkillName": 18,
@@ -2408,12 +2209,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21902,
       "SupportSkillType": 3,
       "SupportSkillName": 18,
@@ -2444,12 +2242,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 21903,
       "SupportSkillType": 3,
       "SupportSkillName": 18,
@@ -2480,12 +2275,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22001,
       "SupportSkillType": 3,
       "SupportSkillName": 19,
@@ -2516,12 +2308,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22002,
       "SupportSkillType": 3,
       "SupportSkillName": 19,
@@ -2552,12 +2341,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22003,
       "SupportSkillType": 3,
       "SupportSkillName": 19,
@@ -2588,12 +2374,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22101,
       "SupportSkillType": 3,
       "SupportSkillName": 20,
@@ -2624,12 +2407,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22102,
       "SupportSkillType": 3,
       "SupportSkillName": 20,
@@ -2660,12 +2440,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22103,
       "SupportSkillType": 3,
       "SupportSkillName": 20,
@@ -2696,12 +2473,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22201,
       "SupportSkillType": 4,
       "SupportSkillName": 21,
@@ -2732,12 +2506,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22202,
       "SupportSkillType": 4,
       "SupportSkillName": 21,
@@ -2768,12 +2539,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22203,
       "SupportSkillType": 4,
       "SupportSkillName": 21,
@@ -2804,12 +2572,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22301,
       "SupportSkillType": 4,
       "SupportSkillName": 22,
@@ -2840,12 +2605,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 55.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 55.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22302,
       "SupportSkillType": 4,
       "SupportSkillName": 22,
@@ -2876,12 +2638,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 80.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 80.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 22303,
       "SupportSkillType": 4,
       "SupportSkillName": 22,
@@ -2912,12 +2671,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30101,
       "SupportSkillType": 5,
       "SupportSkillName": 23,
@@ -2948,12 +2704,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30102,
       "SupportSkillType": 5,
       "SupportSkillName": 23,
@@ -2984,12 +2737,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30201,
       "SupportSkillType": 5,
       "SupportSkillName": 24,
@@ -3020,12 +2770,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30202,
       "SupportSkillType": 5,
       "SupportSkillName": 24,
@@ -3056,12 +2803,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30301,
       "SupportSkillType": 5,
       "SupportSkillName": 25,
@@ -3092,12 +2836,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.1,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30302,
       "SupportSkillType": 5,
       "SupportSkillName": 25,
@@ -3128,12 +2869,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.2,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30401,
       "SupportSkillType": 5,
       "SupportSkillName": 26,
@@ -3164,12 +2902,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.1,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30402,
       "SupportSkillType": 5,
       "SupportSkillName": 26,
@@ -3200,12 +2935,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.15,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30501,
       "SupportSkillType": 5,
       "SupportSkillName": 27,
@@ -3236,12 +2968,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30502,
       "SupportSkillType": 5,
       "SupportSkillName": 27,
@@ -3272,12 +3001,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30601,
       "SupportSkillType": 5,
       "SupportSkillName": 28,
@@ -3308,12 +3034,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.3,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30602,
       "SupportSkillType": 5,
       "SupportSkillName": 28,
@@ -3344,12 +3067,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.5,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30701,
       "SupportSkillType": 5,
       "SupportSkillName": 29,
@@ -3380,12 +3100,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30702,
       "SupportSkillType": 5,
       "SupportSkillName": 29,
@@ -3416,12 +3133,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30801,
       "SupportSkillType": 5,
       "SupportSkillName": 30,
@@ -3452,12 +3166,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 160.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 160.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30802,
       "SupportSkillType": 5,
       "SupportSkillName": 30,
@@ -3488,12 +3199,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 320.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 320.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30901,
       "SupportSkillType": 5,
       "SupportSkillName": 31,
@@ -3524,12 +3232,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 30902,
       "SupportSkillType": 5,
       "SupportSkillName": 31,
@@ -3560,12 +3265,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31001,
       "SupportSkillType": 5,
       "SupportSkillName": 32,
@@ -3596,12 +3298,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31002,
       "SupportSkillType": 5,
       "SupportSkillName": 32,
@@ -3632,12 +3331,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31101,
       "SupportSkillType": 5,
       "SupportSkillName": 33,
@@ -3668,12 +3364,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.1,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31102,
       "SupportSkillType": 5,
       "SupportSkillName": 33,
@@ -3704,12 +3397,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.2,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31201,
       "SupportSkillType": 5,
       "SupportSkillName": 34,
@@ -3740,12 +3430,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.1,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31202,
       "SupportSkillType": 5,
       "SupportSkillName": 34,
@@ -3776,12 +3463,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.2,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31301,
       "SupportSkillType": 5,
       "SupportSkillName": 35,
@@ -3812,12 +3496,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31302,
       "SupportSkillType": 5,
       "SupportSkillName": 35,
@@ -3848,12 +3529,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31401,
       "SupportSkillType": 5,
       "SupportSkillName": 36,
@@ -3884,12 +3562,9 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 400.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 400.0
     },
     {
-      "AcquiredLevel": 0,
       "DataId": 31402,
       "SupportSkillType": 5,
       "SupportSkillName": 36,
@@ -3920,9 +3595,7 @@
       "ProjRange": 0.0,
       "RoatateSpeed": 0.0,
       "ScaleMultiplier": 0.0,
-      "Price": 800.0,
-      "IsLocked": false,
-      "IsPurchased": false
+      "Price": 800.0
     }
   ]
 }

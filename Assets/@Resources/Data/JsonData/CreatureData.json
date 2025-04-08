@@ -16,17 +16,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "Player_Icon.sprite",
-      "SkillTypeList": [
-        10001,
-        10011,
-        10021,
-        10031,
-        10041,
-        10051,
-        10061,
-        10081,
-        10131
-      ]
+      "SkillTypeList": "10001&10011&10021&10031&10041&10051&10061&10081&10131"
     },
     {
       "DataId": 202001,
@@ -44,7 +34,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_01.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202002,
@@ -62,7 +52,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_02.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202003,
@@ -80,7 +70,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_03.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202004,
@@ -98,9 +88,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_04.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202005,
@@ -118,9 +106,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_05.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202006,
@@ -138,9 +124,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_06.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202007,
@@ -158,7 +142,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_07.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202008,
@@ -176,7 +160,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_08.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202009,
@@ -194,7 +178,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_09.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202010,
@@ -212,9 +196,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_10.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202011,
@@ -232,9 +214,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_11.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202012,
@@ -252,9 +232,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_12.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202013,
@@ -272,7 +250,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_13.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202014,
@@ -290,7 +268,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_14.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202015,
@@ -308,7 +286,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_15.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202016,
@@ -326,9 +304,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_16.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202017,
@@ -346,9 +322,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_17.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202018,
@@ -366,9 +340,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_18.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202019,
@@ -386,7 +358,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_19.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202020,
@@ -404,7 +376,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_20.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202021,
@@ -422,7 +394,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_21.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202022,
@@ -440,9 +412,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_22.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202023,
@@ -460,9 +430,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_23.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202024,
@@ -480,9 +448,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_24.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202025,
@@ -500,7 +466,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_25.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202026,
@@ -518,7 +484,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_26.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202027,
@@ -536,7 +502,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_27.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202028,
@@ -554,9 +520,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_28.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202029,
@@ -574,9 +538,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_29.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202030,
@@ -594,9 +556,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_30.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202031,
@@ -614,7 +574,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_31.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202032,
@@ -632,7 +592,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_32.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202033,
@@ -650,7 +610,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_33.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202034,
@@ -668,9 +628,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_34.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202035,
@@ -688,9 +646,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_35.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202036,
@@ -708,9 +664,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_36.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202037,
@@ -728,7 +682,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_37.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202038,
@@ -746,7 +700,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_38.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202039,
@@ -764,7 +718,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_39.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202040,
@@ -782,9 +736,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_40.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202041,
@@ -802,9 +754,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_41.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202042,
@@ -822,9 +772,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_42.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202043,
@@ -842,7 +790,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_43.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202044,
@@ -860,7 +808,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_44.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202045,
@@ -878,7 +826,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_45.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202046,
@@ -896,9 +844,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_46.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202047,
@@ -916,9 +862,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_47.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202048,
@@ -936,9 +880,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_48.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202049,
@@ -956,7 +898,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_49.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202050,
@@ -974,7 +916,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_50.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202051,
@@ -992,7 +934,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_51.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202052,
@@ -1010,9 +952,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_52.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202053,
@@ -1030,9 +970,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_53.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202054,
@@ -1050,9 +988,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_54.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202055,
@@ -1070,7 +1006,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_55.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202056,
@@ -1088,7 +1024,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_56.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202057,
@@ -1106,7 +1042,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_57.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202058,
@@ -1124,9 +1060,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_58.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202059,
@@ -1144,9 +1078,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_59.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202060,
@@ -1164,9 +1096,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_60.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202061,
@@ -1184,7 +1114,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_61.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202062,
@@ -1202,7 +1132,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_62.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202063,
@@ -1220,7 +1150,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_63.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202064,
@@ -1238,9 +1168,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_64.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202065,
@@ -1258,9 +1186,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_65.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202066,
@@ -1278,9 +1204,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_66.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202067,
@@ -1298,7 +1222,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_67.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202068,
@@ -1316,7 +1240,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_68.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202069,
@@ -1334,7 +1258,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_69.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202070,
@@ -1352,9 +1276,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_70.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202071,
@@ -1372,9 +1294,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_71.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202072,
@@ -1392,9 +1312,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_72.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202073,
@@ -1412,7 +1330,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_73.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202074,
@@ -1430,7 +1348,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_74.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202075,
@@ -1448,7 +1366,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_75.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202076,
@@ -1466,9 +1384,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_76.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202077,
@@ -1486,9 +1402,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_77.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202078,
@@ -1506,9 +1420,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_78.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202079,
@@ -1526,7 +1438,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_79.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202080,
@@ -1544,7 +1456,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_80.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202081,
@@ -1562,7 +1474,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_81.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202082,
@@ -1580,9 +1492,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_82.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202083,
@@ -1600,9 +1510,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_83.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202084,
@@ -1620,9 +1528,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_84.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202085,
@@ -1640,7 +1546,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_85.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202086,
@@ -1658,7 +1564,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_86.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202087,
@@ -1676,7 +1582,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_87.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202088,
@@ -1694,9 +1600,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_88.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202089,
@@ -1714,9 +1618,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_89.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202090,
@@ -1734,9 +1636,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_90.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202091,
@@ -1754,7 +1654,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_91.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202092,
@@ -1772,7 +1672,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_92.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202093,
@@ -1790,7 +1690,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_93.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202094,
@@ -1808,9 +1708,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_94.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202095,
@@ -1828,9 +1726,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_95.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202096,
@@ -1848,9 +1744,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_96.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 202097,
@@ -1868,7 +1762,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_97.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202098,
@@ -1886,7 +1780,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_98.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 202099,
@@ -1904,7 +1798,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_99.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203001,
@@ -1922,7 +1816,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_19.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203002,
@@ -1940,7 +1834,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_43.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203003,
@@ -1958,7 +1852,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_67.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203004,
@@ -1976,7 +1870,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_73.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203005,
@@ -1994,7 +1888,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_93.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203006,
@@ -2012,7 +1906,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_07.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203007,
@@ -2030,7 +1924,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_32.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203008,
@@ -2048,7 +1942,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_56.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203009,
@@ -2066,7 +1960,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_57.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203010,
@@ -2084,7 +1978,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_74.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203011,
@@ -2102,7 +1996,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_13.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203012,
@@ -2120,7 +2014,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_31.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203013,
@@ -2138,9 +2032,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_49.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 203014,
@@ -2158,7 +2050,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_87.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203015,
@@ -2176,7 +2068,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_02.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203016,
@@ -2194,7 +2086,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_68.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203017,
@@ -2212,7 +2104,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_26.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203018,
@@ -2230,9 +2122,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_51.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 203019,
@@ -2250,7 +2140,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_61.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203020,
@@ -2268,9 +2158,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_76.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 203021,
@@ -2288,7 +2176,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_14.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203022,
@@ -2306,7 +2194,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_97.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203023,
@@ -2324,7 +2212,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_38.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203024,
@@ -2342,7 +2230,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_55.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203025,
@@ -2360,7 +2248,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_69.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203026,
@@ -2378,7 +2266,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_98.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203027,
@@ -2396,7 +2284,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_20.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203028,
@@ -2414,7 +2302,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_44.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203029,
@@ -2432,7 +2320,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_63.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203030,
@@ -2450,7 +2338,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_82.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203031,
@@ -2468,7 +2356,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_05.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203032,
@@ -2486,7 +2374,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_88.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203033,
@@ -2504,7 +2392,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_30.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203034,
@@ -2522,9 +2410,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_52.sprite",
-      "SkillTypeList": [
-        20091
-      ]
+      "SkillTypeList": "20091"
     },
     {
       "DataId": 203035,
@@ -2542,7 +2428,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_83.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203036,
@@ -2560,7 +2446,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_95.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203037,
@@ -2578,7 +2464,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_12.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203038,
@@ -2596,7 +2482,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_78.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203039,
@@ -2614,7 +2500,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_90.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203040,
@@ -2632,7 +2518,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_99.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 203041,
@@ -2650,7 +2536,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "MonsterIcon_84.sprite",
-      "SkillTypeList": []
+      "SkillTypeList": null
     },
     {
       "DataId": 204001,
@@ -2668,12 +2554,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_01.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100401
-      ]
+      "SkillTypeList": "100201&100401&100401&100401"
     },
     {
       "DataId": 204002,
@@ -2691,12 +2572,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_02.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100201,
-        100501
-      ]
+      "SkillTypeList": "100201&100501&100201&100501"
     },
     {
       "DataId": 204003,
@@ -2714,12 +2590,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_03.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100401
-      ]
+      "SkillTypeList": "100201&100401&100401&100401"
     },
     {
       "DataId": 204004,
@@ -2737,11 +2608,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_04.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100601
-      ]
+      "SkillTypeList": "100201&100601&100601"
     },
     {
       "DataId": 204005,
@@ -2759,17 +2626,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_05.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100101,
-        100201,
-        100401,
-        100401,
-        100501,
-        100501
-      ]
+      "SkillTypeList": "100201&100401&100401&100101&100201&100401&100401&100501&100501"
     },
     {
       "DataId": 204006,
@@ -2787,13 +2644,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_06.sprite",
-      "SkillTypeList": [
-        100201,
-        100701,
-        100701,
-        100503,
-        100503
-      ]
+      "SkillTypeList": "100201&100701&100701&100503&100503"
     },
     {
       "DataId": 204007,
@@ -2811,17 +2662,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_07.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100101,
-        100201,
-        100401,
-        100401,
-        100501,
-        100501
-      ]
+      "SkillTypeList": "100201&100401&100401&100101&100201&100401&100401&100501&100501"
     },
     {
       "DataId": 204008,
@@ -2839,17 +2680,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_08.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100101,
-        100201,
-        100401,
-        100401,
-        100501,
-        100501
-      ]
+      "SkillTypeList": "100201&100401&100401&100101&100201&100401&100401&100501&100501"
     },
     {
       "DataId": 204009,
@@ -2867,17 +2698,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_09.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100401,
-        100102,
-        100201,
-        100401,
-        100401,
-        100103
-      ]
+      "SkillTypeList": "100201&100401&100401&100401&100102&100201&100401&100401&100103"
     },
     {
       "DataId": 204010,
@@ -2895,15 +2716,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_10.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204011,
@@ -2921,17 +2734,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_11.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204012,
@@ -2949,15 +2752,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_12.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204013,
@@ -2975,17 +2770,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_13.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204014,
@@ -3003,15 +2788,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_14.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204015,
@@ -3029,17 +2806,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_15.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204016,
@@ -3057,13 +2824,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_16.sprite",
-      "SkillTypeList": [
-        100201,
-        100701,
-        100701,
-        100503,
-        100503
-      ]
+      "SkillTypeList": "100201&100701&100701&100503&100503"
     },
     {
       "DataId": 204017,
@@ -3081,17 +2842,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_17.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100101,
-        100201,
-        100401,
-        100401,
-        100501,
-        100501
-      ]
+      "SkillTypeList": "100201&100401&100401&100101&100201&100401&100401&100501&100501"
     },
     {
       "DataId": 204018,
@@ -3109,17 +2860,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_18.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100401,
-        100102,
-        100201,
-        100401,
-        100401,
-        100103
-      ]
+      "SkillTypeList": "100201&100401&100401&100401&100102&100201&100401&100401&100103"
     },
     {
       "DataId": 204019,
@@ -3137,13 +2878,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_19.sprite",
-      "SkillTypeList": [
-        100201,
-        100503,
-        100603,
-        100503,
-        100603
-      ]
+      "SkillTypeList": "100201&100503&100603&100503&100603"
     },
     {
       "DataId": 204020,
@@ -3161,17 +2896,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_20.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100101,
-        100201,
-        100401,
-        100401,
-        100501,
-        100501
-      ]
+      "SkillTypeList": "100201&100401&100401&100101&100201&100401&100401&100501&100501"
     },
     {
       "DataId": 204021,
@@ -3189,17 +2914,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_21.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204022,
@@ -3217,15 +2932,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_22.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204023,
@@ -3243,13 +2950,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_23.sprite",
-      "SkillTypeList": [
-        100201,
-        100701,
-        100701,
-        100503,
-        100503
-      ]
+      "SkillTypeList": "100201&100701&100701&100503&100503"
     },
     {
       "DataId": 204024,
@@ -3267,15 +2968,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_24.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204025,
@@ -3293,15 +2986,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_25.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204026,
@@ -3319,13 +3004,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_26.sprite",
-      "SkillTypeList": [
-        100201,
-        100701,
-        100701,
-        100503,
-        100503
-      ]
+      "SkillTypeList": "100201&100701&100701&100503&100503"
     },
     {
       "DataId": 204027,
@@ -3343,17 +3022,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_27.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204028,
@@ -3371,15 +3040,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_28.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204029,
@@ -3397,15 +3058,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_29.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204030,
@@ -3423,18 +3076,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_30.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105,
-        100401,
-        100401,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100401&100401&100103&100104&100105&100401&100401&100701&100701"
     },
     {
       "DataId": 204031,
@@ -3452,17 +3094,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_31.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100401,
-        100102,
-        100201,
-        100401,
-        100401,
-        100103
-      ]
+      "SkillTypeList": "100201&100401&100401&100401&100102&100201&100401&100401&100103"
     },
     {
       "DataId": 204032,
@@ -3480,15 +3112,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_32.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204033,
@@ -3506,17 +3130,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_33.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204034,
@@ -3534,15 +3148,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_34.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204035,
@@ -3560,17 +3166,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_35.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204036,
@@ -3588,18 +3184,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_36.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105,
-        100401,
-        100401,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100401&100401&100103&100104&100105&100401&100401&100701&100701"
     },
     {
       "DataId": 204037,
@@ -3617,15 +3202,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_37.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204038,
@@ -3643,15 +3220,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_38.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204039,
@@ -3669,17 +3238,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_39.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204040,
@@ -3697,15 +3256,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_40.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204041,
@@ -3723,15 +3274,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_41.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204042,
@@ -3749,15 +3292,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_42.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204043,
@@ -3775,18 +3310,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_43.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105,
-        100401,
-        100401,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100401&100401&100103&100104&100105&100401&100401&100701&100701"
     },
     {
       "DataId": 204044,
@@ -3804,15 +3328,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_44.sprite",
-      "SkillTypeList": [
-        100201,
-        100501,
-        100501,
-        100201,
-        100502,
-        100502,
-        100502
-      ]
+      "SkillTypeList": "100201&100501&100501&100201&100502&100502&100502"
     },
     {
       "DataId": 204045,
@@ -3830,18 +3346,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_45.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105,
-        100401,
-        100401,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100401&100401&100103&100104&100105&100401&100401&100701&100701"
     },
     {
       "DataId": 204046,
@@ -3859,13 +3364,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_46.sprite",
-      "SkillTypeList": [
-        100201,
-        100701,
-        100701,
-        100503,
-        100503
-      ]
+      "SkillTypeList": "100201&100701&100701&100503&100503"
     },
     {
       "DataId": 204047,
@@ -3883,17 +3382,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_47.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100102,
-        100103,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105
-      ]
+      "SkillTypeList": "100201&100401&100102&100103&100401&100401&100103&100104&100105"
     },
     {
       "DataId": 204048,
@@ -3911,18 +3400,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_48.sprite",
-      "SkillTypeList": [
-        100201,
-        100401,
-        100401,
-        100103,
-        100104,
-        100105,
-        100401,
-        100401,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100401&100401&100103&100104&100105&100401&100401&100701&100701"
     },
     {
       "DataId": 204049,
@@ -3940,15 +3418,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_49.sprite",
-      "SkillTypeList": [
-        100201,
-        100601,
-        100602,
-        100603,
-        100201,
-        100701,
-        100701
-      ]
+      "SkillTypeList": "100201&100601&100602&100603&100201&100701&100701"
     },
     {
       "DataId": 204050,
@@ -3966,13 +3436,7 @@
       "DefRate": 1.0,
       "MoveSpeedRate": 1.0,
       "IconLabel": "BossIcon_50.sprite",
-      "SkillTypeList": [
-        100201,
-        100503,
-        100603,
-        100503,
-        100603
-      ]
+      "SkillTypeList": "100201&100503&100603&100503&100603"
     }
   ]
 }

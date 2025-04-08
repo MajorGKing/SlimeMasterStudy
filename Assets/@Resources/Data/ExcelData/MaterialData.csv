@@ -1,4 +1,4 @@
-﻿ID,MaterialType,MaterialGrade,NameTextID,DescriptionTextID,SpriteName
+﻿DataId,MaterialType,MaterialGrade,NameTextID,DescriptionTextID,SpriteName
 50001,Gold,Epic,골드,장비를 강화할 때 사용,Gold_Icon.sprite
 50002,Dia,Epic,다이아,상점에서 물품을 구매할 때 사용,Dia_Icon.sprite
 50003,Stamina,Epic,스테미나,스테이지 입장 시 사용,Stamina_Icon.sprite

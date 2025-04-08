@@ -9,17 +9,24 @@ using Object = UnityEngine.Object;
 
 public class UI_TitleScene : UI_Scene
 {
-	private enum GameObjects
-	{
-		StartButton,
-	}
+    #region Enum
+    enum GameObjects
+    {
+        Slider,
+    }
 
-	private enum Texts
-	{
-		StatusText,
-	}
+    enum Buttons
+    {
+        StartButton
+    }
 
-	private enum TitleSceneState
+    enum Texts
+    {
+        StartText
+    }
+    #endregion
+
+    private enum TitleSceneState
 	{
 		None,
 		AssetLoading,
@@ -41,19 +48,19 @@ public class UI_TitleScene : UI_Scene
 				case TitleSceneState.None:
 					break;
 				case TitleSceneState.AssetLoading:
-					GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß";
+					GetText((int)Texts.StartText).text = $"TODO ë¡œë”©ì¤‘";
 					break;
 				case TitleSceneState.AssetLoaded:
-					GetText((int)Texts.StatusText).text = "TODO ·Îµù ¿Ï·á";
+					GetText((int)Texts.StartText).text = "TODO ë¡œë”© ì™„ë£Œ";
 					break;
 				case TitleSceneState.ConnectingToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼ÓÁß";
+					GetText((int)Texts.StartText).text = "TODO ì„œë²„ ì ‘ì†ì¤‘";
 					break;
 				case TitleSceneState.ConnectedToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼Ó ¼º°ø";
+					GetText((int)Texts.StartText).text = "í„°ì¹˜í•˜ì—¬ ì‹œìž‘í•˜ê¸°";
 					break;
 				case TitleSceneState.FailedToConnectToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼Ó ½ÇÆÐ";
+					GetText((int)Texts.StartText).text = "TODO ì„œë²„ ì ‘ì† ì‹¤íŒ¨";
 					break;
 			}
 		}
@@ -65,26 +72,27 @@ public class UI_TitleScene : UI_Scene
 
 		BindObjects(typeof(GameObjects));
 		BindTexts(typeof(Texts));
+		BindButtons(typeof(Buttons));
 
-		GetObject((int)GameObjects.StartButton).BindEvent((evt) =>
-		{
-			Debug.Log("OnClick");
-			Managers.Scene.LoadScene(EScene.GameScene);
-		});
+		GetButton((int)Buttons.StartButton).gameObject.BindEvent((evt) =>
+        {
+            Debug.Log("OnClick");
+            Managers.Scene.LoadScene(EScene.GameScene);
+        });
 
-		GetObject((int)GameObjects.StartButton).gameObject.SetActive(false);
+        GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
 	}
 
 	protected override void Start()
 	{
 		base.Start();
 
-		// Load ½ÃÀÛ
+		// Load ì‹œìž‘
 		State = TitleSceneState.AssetLoading;
 
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
-			GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß : {key} {count}/{totalCount}";
+			GetText((int)Texts.StartText).text = $"TODO ë¡œë”©ì¤‘ : {key} {count}/{totalCount}";
 
 			if (count == totalCount)
 			{
@@ -98,20 +106,24 @@ public class UI_TitleScene : UI_Scene
 		State = TitleSceneState.AssetLoaded;
 		Managers.Data.Init();
 
-		Debug.Log("Connecting To Server");
-		State = TitleSceneState.ConnectingToServer;
+        State = TitleSceneState.ConnectedToServer;
 
-		IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
-		IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
-		Managers.Network.GameServer.Connect(endPoint, OnConnectionSuccess, OnConnectionFailed);
-	}
+        GetButton((int)Buttons.StartButton).gameObject.SetActive(true);
+
+        //Debug.Log("Connecting To Server");
+        //State = TitleSceneState.ConnectingToServer;
+
+        //IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
+        //IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
+        //Managers.Network.GameServer.Connect(endPoint, OnConnectionSuccess, OnConnectionFailed);
+    }
 
 	private void OnConnectionSuccess()
 	{
 		Debug.Log("Connected To Server");
 		State = TitleSceneState.ConnectedToServer;
 
-		GetObject((int)GameObjects.StartButton).gameObject.SetActive(true);
+		GetButton((int)Buttons.StartButton).gameObject.SetActive(true);
 
 		StartCoroutine(CoSendTestPackets());
 	}
