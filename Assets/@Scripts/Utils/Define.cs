@@ -8,6 +8,28 @@ public class Define
     public const char MAP_TOOL_WALL = '0';
     public const char MAP_TOOL_NONE = '1';
 
+    #region 데이터아이디
+    public static int ID_GOLD = 50001;
+    public static int ID_DIA = 50002;
+    public static int ID_STAMINA = 50003;
+    public static int ID_BRONZE_KEY = 50201;
+    public static int ID_SILVER_KEY = 50202;
+    public static int ID_GOLD_KEY = 50203;
+    public static int ID_RANDOM_SCROLL = 50301;
+    public static int ID_POTION = 60001;
+    public static int ID_MAGNET = 60004;
+    public static int ID_BOMB = 60008;
+
+    public static int ID_WEAPON_SCROLL = 50101;
+    public static int ID_GLOVES_SCROLL = 50102;
+    public static int ID_RING_SCROLL = 50103;
+    public static int ID_BELT_SCROLL = 50104;
+    public static int ID_ARMOR_SCROLL = 50105;
+    public static int ID_BOOTS_SCROLL = 50106;
+
+    public static string GOLD_SPRITE_NAME = "Gold_Icon";
+    #endregion
+
 
     #region Enum
     public enum EScene
@@ -355,5 +377,30 @@ public class Define
         Snake,
         GoblinLoad,
     }
+    #endregion
+}
+
+public static class DEquipmentUIColors
+{
+    #region 장비 이름 색상
+    public static readonly Color CommonNameColor = HexToColor("A2A2A2");
+    public static readonly Color UncommonNameColor = HexToColor("57FF0B");
+    public static readonly Color RareNameColor = HexToColor("2471E0");
+    public static readonly Color EpicNameColor = HexToColor("9F37F2");
+    public static readonly Color LegendaryNameColor = HexToColor("F67B09");
+    public static readonly Color MythNameColor = HexToColor("F1331A");
+    #endregion
+    #region 테두리 색상
+    public static readonly Color Common = HexToColor("AC9B83");
+    public static readonly Color Uncommon = HexToColor("73EC4E");
+    public static readonly Color Rare = HexToColor("0F84FF");
+    public static readonly Color Epic = HexToColor("B740EA");
+    public static readonly Color Legendary = HexToColor("F19B02");
+    public static readonly Color Myth = HexToColor("FC2302");
+    #endregion
+    #region 배경색상
+    public static readonly Color EpicBg = HexToColor("D094FF");
+    public static readonly Color LegendaryBg = HexToColor("F8BE56");
+    public static readonly Color MythBg = HexToColor("FF7F6E");
     #endregion
 }

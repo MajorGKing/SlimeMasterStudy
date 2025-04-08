@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -95,5 +96,12 @@ public abstract class UI_Base : MonoBehaviour
                 evt.OnEndDragHandler += action;
                 break;
         }
+    }
+
+    // 팝업 오픈 연출 용
+    public void PopupOpenAnimation(GameObject contentObject)
+    {
+        contentObject.transform.localScale = new Vector3(0.8f, 0.8f, 1);
+        contentObject.transform.DOScale(1f, 0.1f).SetEase(Ease.InOutBack).SetUpdate(true);
     }
 }
