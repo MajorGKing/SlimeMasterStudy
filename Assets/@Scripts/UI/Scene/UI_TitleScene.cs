@@ -77,7 +77,7 @@ public class UI_TitleScene : UI_Scene
 		GetButton((int)Buttons.StartButton).gameObject.BindEvent((evt) =>
         {
             Debug.Log("OnClick");
-            Managers.Scene.LoadScene(EScene.GameScene);
+            Managers.Scene.LoadScene(EScene.LobbyScene);
         });
 
         GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
