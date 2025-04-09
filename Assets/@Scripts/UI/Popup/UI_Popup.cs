@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class UI_Popup : UI_Base
 {
-    public Canvas UICanvas;
+    [HideInInspector] public Canvas UICanvas;
 
     protected override void Awake()
     {

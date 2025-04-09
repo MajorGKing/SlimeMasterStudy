@@ -57,6 +57,7 @@ public class Define
         BeginDrag,
         Drag,
         EndDrag,
+        LongPressed,
     }
 
     public enum ELanguage
