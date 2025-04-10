@@ -277,11 +277,29 @@ public class GameManager
 
     #endregion
 
+
     #region Action
     public event Action<Vector2> OnMoveDirChanged;
     public event Action EquipInfoChanged;
     public event Action OnResourcesChagned;
     //public Action OnMonsterDataUpdated;
+    #endregion
+
+    #region InGame
+    public (int hp, int atk) GetCurrentChracterStat()
+    {
+        int hpBonus = 0;
+        int AtkBonus = 0;
+        // TODO ILHAK
+        //var (equipHpBonus, equipAtkBonus) = GetEquipmentBonus();
+
+        //Character ch = CurrentCharacter;
+
+        //hpBonus = (equipHpBonus);
+        //AtkBonus = (equipAtkBonus);
+
+        return (hpBonus, AtkBonus);
+    }
     #endregion
 
     #region Save&Load
