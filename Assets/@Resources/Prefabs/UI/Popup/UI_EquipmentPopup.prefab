@@ -994,7 +994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -960}
+  m_AnchoredPosition: {x: 540, y: -1265}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3431860651256660088
@@ -3888,10 +3888,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6509377651491043877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611c9eadee0ce0c498c4f258fc6579b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6258d40327bce764ba5a2145452e7e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollRect: {fileID: 6509377651285929198}
 --- !u!1 &6509377651532727964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +4980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -990}
+  m_AnchoredPosition: {x: 540, y: -1905}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2306478951761037288
@@ -5106,6 +5105,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 492806286732242292}
     m_Modifications:
+    - target: {fileID: 991839830468224254, guid: d70cfb68c693d5b4c945321314dcbe5f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522409363416898894, guid: d70cfb68c693d5b4c945321314dcbe5f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6778396710477536573, guid: d70cfb68c693d5b4c945321314dcbe5f, type: 3}
       propertyPath: m_Name
       value: UI_MaterialItem
