@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using UnityEngine;
 using static Define;
@@ -97,7 +97,7 @@ public static class Utils
 
         return false;
     }
-    
+
     public static T ParseEnum<T>(string value)
     {
         return (T)Enum.Parse(typeof(T), value, true);

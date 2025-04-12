@@ -163,7 +163,7 @@ public class ContinueData
 public class GameManager
 {
     #region GameData
-    public GameData _gameData = new GameData();
+    private GameData _gameData = new GameData();
     public List<Equipment> OwnedEquipments
     {
         get { return _gameData.OwnedEquipments; }
@@ -275,8 +275,37 @@ public class GameManager
         }
     }
 
+    public ContinueData ContinueInfo
+    {
+        get { return _gameData.ContinueInfo; }
+        set { _gameData.ContinueInfo = value; }
+    }
+
+    public StageData CurrentStageData
+    {
+        get { return _gameData.CurrentStage; }
+        set { _gameData.CurrentStage = value; }
+    }
+
     #endregion
 
+    public int RemainsStaminaByDia
+    {
+        get { return _gameData.RemainsStaminaByDia; }
+        set
+        {
+            _gameData.RemainsStaminaByDia = value;
+        }
+    }
+
+    public int StaminaCountAds
+    {
+        get { return _gameData.StaminaCountAds; }
+        set
+        {
+            _gameData.StaminaCountAds = value;
+        }
+    }
 
     #region Action
     public event Action<Vector2> OnMoveDirChanged;
@@ -284,6 +313,11 @@ public class GameManager
     public event Action OnResourcesChagned;
     //public Action OnMonsterDataUpdated;
     #endregion
+
+    public float TimeRemaining = 60;
+    public Vector3 SoulDestination { get; set; }
+    public bool IsLoaded = false;
+    public bool IsGameEnd = false;
 
     #region InGame
     public (int hp, int atk) GetCurrentChracterStat()
@@ -315,6 +349,15 @@ public class GameManager
         //}
         string jsonStr = JsonConvert.SerializeObject(_gameData);
         File.WriteAllText(_path, jsonStr);
+    }
+
+    public void ClearContinueData()
+    {
+        // TODO ILHAK
+        //Managers.Game.SoulShopList.Clear();
+        //ContinueInfo.Clear();
+        //CurrentWaveIndex = 0;
+        SaveGame();
     }
     #endregion
 }
