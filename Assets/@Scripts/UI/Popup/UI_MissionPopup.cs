@@ -1,9 +1,6 @@
 using Data;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 
 public class UI_MissionPopup : UI_Popup
 {
@@ -73,5 +70,4 @@ public class UI_MissionPopup : UI_Popup
     {
         Managers.UI.ClosePopupUI(this);
     }
-
 }

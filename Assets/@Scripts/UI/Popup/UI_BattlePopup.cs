@@ -447,32 +447,82 @@ public class UI_BattlePopup : UI_Popup
 
     private void OnClickSettingButton(PointerEventData evt)
     {
-
+        Managers.Sound.PlayButtonClick();
+        Managers.UI.ShowPopupUI<UI_SettingPopup>();
     }
 
     private void OnClickAchievementButton(PointerEventData evt)
     {
-
+        Managers.Sound.PlayButtonClick();
+        Managers.UI.ShowPopupUI<UI_AchievementPopup>();
     }
 
     private void OnClickAttendanceCheckButton(PointerEventData evt)
     {
-
+        // TODO ILHAK after Time Managers
+        Managers.Sound.PlayButtonClick();
+        //UI_CheckOutPopup popup = Managers.UI.ShowPopupUI<UI_CheckOutPopup>();
+        //popup.SetInfo(Managers.Time.AttendanceDay);
     }
 
     private void OnClickFirstClearRewardButton(PointerEventData evt)
     {
-
+        OnClickClearRewardButton(0);
     }
 
     private void OnClickSecondClearRewardButton(PointerEventData evt)
     {
-
+        OnClickClearRewardButton(1);
     }
 
     private void OnClickThirdClearRewardButton(PointerEventData evt)
     {
+        OnClickClearRewardButton(2);
+    }
 
+    private void OnClickClearRewardButton(int index)
+    {
+        Managers.Sound.PlayButtonClick();
+        if (_boxes[index].state != ERewardBoxState.RedDot)
+            return;
+
+        if (Managers.Game.DicStageClearInfo.ContainsKey(_currentStageData.StageIndex))
+        {
+            int itemId = -1;
+            string[] spriteName = new string[1];
+            int[] count = new int[1];
+
+            if (index == 0)
+            {
+                Managers.Game.DicStageClearInfo[_currentStageData.StageIndex].isOpenFirstBox = true;
+                itemId = _currentStageData.FirstWaveClearRewardItemId;
+                count[0] = _currentStageData.FirstWaveClearRewardItemValue;
+            }
+            if (index == 1)
+            {
+                Managers.Game.DicStageClearInfo[_currentStageData.StageIndex].isOpenSecondBox = true;
+                itemId = _currentStageData.SecondWaveClearRewardItemId;
+                count[0] = _currentStageData.SecondWaveClearRewardItemValue;
+            }
+            if (index == 2)
+            {
+                Managers.Game.DicStageClearInfo[_currentStageData.StageIndex].isOpenThirdBox = true;
+                itemId = _currentStageData.ThirdWaveClearRewardItemId;
+                count[0] = _currentStageData.ThirdWaveClearRewardItemValue;
+            }
+
+            SetBoxState(index, ERewardBoxState.Complete);
+
+            if (Managers.Data.MaterialDic.TryGetValue(itemId, out MaterialData materialData))
+            {
+                spriteName[0] = materialData.SpriteName;
+                
+                UI_RewardPopup rewardPopup = (Managers.UI.SceneUI as UI_LobbyScene).RewardPopupUI;
+                rewardPopup.gameObject.SetActive(true);
+                Managers.Game.ExchangeMaterial(materialData, count[0]);
+                rewardPopup.SetInfo(spriteName, count);
+            }
+        }
     }
     #endregion
 }

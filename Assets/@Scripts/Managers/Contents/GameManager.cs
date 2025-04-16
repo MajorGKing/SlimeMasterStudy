@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -289,6 +290,43 @@ public class GameManager
 
     #endregion
 
+    #region Option
+    public bool BGMOn
+    {
+        get { return _gameData.BGMOn; }
+        set
+        {
+            if (_gameData.BGMOn == value)
+                return;
+            _gameData.BGMOn = value;
+            if (_gameData.BGMOn == false)
+            {
+                Managers.Sound.Stop(Define.ESound.Bgm);
+            }
+            else
+            {
+                string name = "Bgm_Lobby";
+                if (Managers.Scene.CurrentScene.SceneType == Define.EScene.GameScene)
+                    name = "Bgm_Game";
+
+                Managers.Sound.Play(Define.ESound.Bgm, name);
+            }
+        }
+    }
+
+    public bool EffectSoundOn
+    {
+        get { return _gameData.EffectSoundOn; }
+        set { _gameData.EffectSoundOn = value; }
+    }
+
+    public Define.EJoystickType JoystickType
+    {
+        get { return _gameData.JoystickType; }
+        set { _gameData.JoystickType = value; }
+    }
+    #endregion
+
     public int RemainsStaminaByDia
     {
         get { return _gameData.RemainsStaminaByDia; }
@@ -318,6 +356,66 @@ public class GameManager
     public Vector3 SoulDestination { get; set; }
     public bool IsLoaded = false;
     public bool IsGameEnd = false;
+
+    public void ExchangeMaterial(MaterialData data, int count)
+    {
+        switch (data.MaterialType)
+        {
+            case Define.EMaterialType.Dia:
+                Dia += count;
+                break;
+            case Define.EMaterialType.Gold:
+                Gold += count;
+                break;
+            case Define.EMaterialType.Stamina:
+                Stamina += count;
+                break;
+            case Define.EMaterialType.BronzeKey:
+            case Define.EMaterialType.SilverKey:
+            case Define.EMaterialType.GoldKey:
+                AddMaterialItem(data.DataId, count);
+                break;
+            case Define.EMaterialType.RandomScroll:
+                int randScroll = UnityEngine.Random.Range(50101, 50106);
+                AddMaterialItem(randScroll, count);
+                break;
+            case Define.EMaterialType.WeaponScroll:
+                AddMaterialItem(Define.ID_WEAPON_SCROLL, count);
+                break;
+            case Define.EMaterialType.GlovesScroll:
+                AddMaterialItem(Define.ID_GLOVES_SCROLL, count);
+                break;
+            case Define.EMaterialType.RingScroll:
+                AddMaterialItem(Define.ID_RING_SCROLL, count);
+                break;
+            case Define.EMaterialType.BeltScroll:
+                AddMaterialItem(Define.ID_BELT_SCROLL, count);
+                break;
+            case Define.EMaterialType.ArmorScroll:
+                AddMaterialItem(Define.ID_ARMOR_SCROLL, count);
+                break;
+            case Define.EMaterialType.BootsScroll:
+                AddMaterialItem(Define.ID_BOOTS_SCROLL, count);
+                break;
+            default:
+                //TODO 
+                break;
+        }
+    }
+
+    public void AddMaterialItem(int id, int quantity)
+    {
+        if (ItemDictionary.ContainsKey(id))
+        {
+            ItemDictionary[id] += quantity;
+        }
+        else
+        {
+            ItemDictionary[id] = quantity;
+        }
+        SaveGame();
+    }
+
 
     #region InGame
     public (int hp, int atk) GetCurrentChracterStat()
