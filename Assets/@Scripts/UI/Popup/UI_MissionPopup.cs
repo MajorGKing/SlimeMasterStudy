@@ -64,6 +64,11 @@ public class UI_MissionPopup : UI_Popup
         }
     }
 
+    private void OnEnable()
+    {
+        PopupOpenAnimation(GetObject((int)GameObjects.ContentObject));
+    }
+
     private void OnClickBackgroundButton(PointerEventData evt)
     {
         Managers.UI.ClosePopupUI(this);
