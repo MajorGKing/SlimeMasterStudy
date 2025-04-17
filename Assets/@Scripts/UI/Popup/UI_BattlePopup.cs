@@ -190,6 +190,7 @@ public class UI_BattlePopup : UI_Popup
             GetText((int)Texts.SurvivalWaveValueText).text = "기록 없음";
 
         // StageImage : 마지막 도전한 스테이지의 이미지
+        Debug.Log($"ILHAK : {Managers.Game.CurrentStageData.StageImage}");
         GetImage((int)Images.StageImage).sprite = Managers.Resource.Load<Sprite>(Managers.Game.CurrentStageData.StageImage);
 
         // 스테이지 보상 ( 클리어 조건에 따라 상태 변화 필요)

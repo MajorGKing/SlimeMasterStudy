@@ -8009,7 +8009,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 116.79, y: -52.565}
-  m_SizeDelta: {x: 233.58, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8592733700267450340
 CanvasRenderer:
@@ -8307,7 +8307,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 257.51, y: -52.565}
-  m_SizeDelta: {x: 27.86, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8592733700544694823
 CanvasRenderer:
@@ -9298,6 +9298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d870914f7518dee459b50f53169f138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UICanvas: {fileID: 0}
 --- !u!1 &8592733701531849200
 GameObject:
   m_ObjectHideFlags: 0

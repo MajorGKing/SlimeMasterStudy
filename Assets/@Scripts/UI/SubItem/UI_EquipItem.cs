@@ -136,7 +136,7 @@ public class UI_EquipItem : UI_SubItem
         // EquipmentImage : 장비의 아이콘
         GetImage((int)Images.EquipmentImage).sprite = Managers.Resource.Load<Sprite>(Equipment.EquipmentData.SpriteName);
         // 장비 타입 아이콘
-        GetImage((int)Images.EquipmentTypeImage).sprite = Managers.Resource.Load<Sprite>($"{Equipment.EquipmentData.EquipmentType}_Icon.sprite");
+        GetImage((int)Images.EquipmentTypeImage).sprite = Managers.Resource.Load<Sprite>($"{Equipment.EquipmentData.EquipmentType}_Icon");
         // EquipmentLevelValueText : 장비의 현재 레벨
         GetText((int)Texts.EquipmentLevelValueText).text = $"Lv.{Equipment.Level}";
         // EquipmentRedDotObject : 장비가 강화가 가능할때 출력 

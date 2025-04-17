@@ -17,7 +17,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 1000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_01.sprite",
+      "StageImage": "MapIcon_01",
       "AppearingMonsters": "202001&202004"
     },
     {
@@ -37,7 +37,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 7000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_02.sprite",
+      "StageImage": "MapIcon_02",
       "AppearingMonsters": "202002&202005"
     },
     {
@@ -57,7 +57,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 13000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_03.sprite",
+      "StageImage": "MapIcon_03",
       "AppearingMonsters": "202003&202006"
     },
     {
@@ -77,7 +77,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 18000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_04.sprite",
+      "StageImage": "MapIcon_04",
       "AppearingMonsters": "202001&202007&202010"
     },
     {
@@ -97,7 +97,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 24000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_05.sprite",
+      "StageImage": "MapIcon_05",
       "AppearingMonsters": "202002&202008&202011"
     },
     {
@@ -117,7 +117,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 29000,
       "ClearReward_Exp": 10,
-      "StageImage": "MapIcon_06.sprite",
+      "StageImage": "MapIcon_06",
       "AppearingMonsters": "202003&202009&202012"
     },
     {
@@ -137,7 +137,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 35000,
       "ClearReward_Exp": 10,
-      "StageImage": "MapIcon_07.sprite",
+      "StageImage": "MapIcon_07",
       "AppearingMonsters": "202007&202013&202016"
     },
     {
@@ -157,7 +157,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 40000,
       "ClearReward_Exp": 10,
-      "StageImage": "MapIcon_08.sprite",
+      "StageImage": "MapIcon_08",
       "AppearingMonsters": "202008&202014&202017"
     },
     {
@@ -177,7 +177,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 46000,
       "ClearReward_Exp": 10,
-      "StageImage": "MapIcon_09.sprite",
+      "StageImage": "MapIcon_09",
       "AppearingMonsters": "202009&202015&202018"
     },
     {
@@ -197,7 +197,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 52000,
       "ClearReward_Exp": 10,
-      "StageImage": "MapIcon_10.sprite",
+      "StageImage": "MapIcon_10",
       "AppearingMonsters": "202013&202019&202022"
     },
     {
@@ -217,7 +217,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 57000,
       "ClearReward_Exp": 15,
-      "StageImage": "MapIcon_11.sprite",
+      "StageImage": "MapIcon_11",
       "AppearingMonsters": "202014&202020&202023"
     },
     {
@@ -237,7 +237,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 63000,
       "ClearReward_Exp": 15,
-      "StageImage": "MapIcon_12.sprite",
+      "StageImage": "MapIcon_12",
       "AppearingMonsters": "202015&202021&202024"
     },
     {
@@ -257,7 +257,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 68000,
       "ClearReward_Exp": 15,
-      "StageImage": "MapIcon_13.sprite",
+      "StageImage": "MapIcon_13",
       "AppearingMonsters": "202019&202025&202028"
     },
     {
@@ -277,7 +277,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 74000,
       "ClearReward_Exp": 15,
-      "StageImage": "MapIcon_14.sprite",
+      "StageImage": "MapIcon_14",
       "AppearingMonsters": "202020&202026&202029"
     },
     {
@@ -297,7 +297,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 79000,
       "ClearReward_Exp": 15,
-      "StageImage": "MapIcon_15.sprite",
+      "StageImage": "MapIcon_15",
       "AppearingMonsters": "202021&202027&202030"
     },
     {
@@ -317,7 +317,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 85000,
       "ClearReward_Exp": 20,
-      "StageImage": "MapIcon_16.sprite",
+      "StageImage": "MapIcon_16",
       "AppearingMonsters": "202025&202031&202034"
     },
     {
@@ -337,7 +337,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 90000,
       "ClearReward_Exp": 20,
-      "StageImage": "MapIcon_17.sprite",
+      "StageImage": "MapIcon_17",
       "AppearingMonsters": "202026&202032&202035"
     },
     {
@@ -357,7 +357,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 96000,
       "ClearReward_Exp": 20,
-      "StageImage": "MapIcon_18.sprite",
+      "StageImage": "MapIcon_18",
       "AppearingMonsters": "202027&202033&202036"
     },
     {
@@ -377,7 +377,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 102000,
       "ClearReward_Exp": 20,
-      "StageImage": "MapIcon_19.sprite",
+      "StageImage": "MapIcon_19",
       "AppearingMonsters": "202031&202037&202040"
     },
     {
@@ -397,7 +397,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 107000,
       "ClearReward_Exp": 20,
-      "StageImage": "MapIcon_20.sprite",
+      "StageImage": "MapIcon_20",
       "AppearingMonsters": "202032&202038&202041"
     },
     {
@@ -417,7 +417,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 113000,
       "ClearReward_Exp": 25,
-      "StageImage": "MapIcon_21.sprite",
+      "StageImage": "MapIcon_21",
       "AppearingMonsters": "202033&202039&202042"
     },
     {
@@ -437,7 +437,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 118000,
       "ClearReward_Exp": 25,
-      "StageImage": "MapIcon_22.sprite",
+      "StageImage": "MapIcon_22",
       "AppearingMonsters": "202037&202043&202046"
     },
     {
@@ -457,7 +457,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 124000,
       "ClearReward_Exp": 25,
-      "StageImage": "MapIcon_23.sprite",
+      "StageImage": "MapIcon_23",
       "AppearingMonsters": "202038&202044&202047"
     },
     {
@@ -477,7 +477,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 129000,
       "ClearReward_Exp": 25,
-      "StageImage": "MapIcon_24.sprite",
+      "StageImage": "MapIcon_24",
       "AppearingMonsters": "202039&202045&202048"
     },
     {
@@ -497,7 +497,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 135000,
       "ClearReward_Exp": 25,
-      "StageImage": "MapIcon_25.sprite",
+      "StageImage": "MapIcon_25",
       "AppearingMonsters": "202043&202049&202052"
     },
     {
@@ -517,7 +517,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 141000,
       "ClearReward_Exp": 30,
-      "StageImage": "MapIcon_26.sprite",
+      "StageImage": "MapIcon_26",
       "AppearingMonsters": "202044&202050&202053"
     },
     {
@@ -537,7 +537,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 146000,
       "ClearReward_Exp": 30,
-      "StageImage": "MapIcon_27.sprite",
+      "StageImage": "MapIcon_27",
       "AppearingMonsters": "202045&202051&202054"
     },
     {
@@ -557,7 +557,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 152000,
       "ClearReward_Exp": 30,
-      "StageImage": "MapIcon_28.sprite",
+      "StageImage": "MapIcon_28",
       "AppearingMonsters": "202049&202055&202058"
     },
     {
@@ -577,7 +577,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 157000,
       "ClearReward_Exp": 30,
-      "StageImage": "MapIcon_29.sprite",
+      "StageImage": "MapIcon_29",
       "AppearingMonsters": "202050&202056&202059"
     },
     {
@@ -597,7 +597,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 163000,
       "ClearReward_Exp": 30,
-      "StageImage": "MapIcon_30.sprite",
+      "StageImage": "MapIcon_30",
       "AppearingMonsters": "202051&202057&202060"
     },
     {
@@ -617,7 +617,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 168000,
       "ClearReward_Exp": 35,
-      "StageImage": "MapIcon_31.sprite",
+      "StageImage": "MapIcon_31",
       "AppearingMonsters": "202055&202061&202064"
     },
     {
@@ -637,7 +637,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 174000,
       "ClearReward_Exp": 35,
-      "StageImage": "MapIcon_32.sprite",
+      "StageImage": "MapIcon_32",
       "AppearingMonsters": "202056&202062&202065"
     },
     {
@@ -657,7 +657,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 179000,
       "ClearReward_Exp": 35,
-      "StageImage": "MapIcon_33.sprite",
+      "StageImage": "MapIcon_33",
       "AppearingMonsters": "202057&202063&202066"
     },
     {
@@ -677,7 +677,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 185000,
       "ClearReward_Exp": 35,
-      "StageImage": "MapIcon_34.sprite",
+      "StageImage": "MapIcon_34",
       "AppearingMonsters": "202061&202067&202070"
     },
     {
@@ -697,7 +697,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 191000,
       "ClearReward_Exp": 35,
-      "StageImage": "MapIcon_35.sprite",
+      "StageImage": "MapIcon_35",
       "AppearingMonsters": "202062&202068&202071"
     },
     {
@@ -717,7 +717,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 196000,
       "ClearReward_Exp": 40,
-      "StageImage": "MapIcon_36.sprite",
+      "StageImage": "MapIcon_36",
       "AppearingMonsters": "202063&202069&202072"
     },
     {
@@ -737,7 +737,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 202000,
       "ClearReward_Exp": 40,
-      "StageImage": "MapIcon_37.sprite",
+      "StageImage": "MapIcon_37",
       "AppearingMonsters": "202067&202073&202076"
     },
     {
@@ -757,7 +757,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 207000,
       "ClearReward_Exp": 40,
-      "StageImage": "MapIcon_38.sprite",
+      "StageImage": "MapIcon_38",
       "AppearingMonsters": "202068&202074&202077"
     },
     {
@@ -777,7 +777,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 213000,
       "ClearReward_Exp": 40,
-      "StageImage": "MapIcon_39.sprite",
+      "StageImage": "MapIcon_39",
       "AppearingMonsters": "202069&202075&202078"
     },
     {
@@ -797,7 +797,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 218000,
       "ClearReward_Exp": 40,
-      "StageImage": "MapIcon_40.sprite",
+      "StageImage": "MapIcon_40",
       "AppearingMonsters": "202073&202079&202082"
     },
     {
@@ -817,7 +817,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 224000,
       "ClearReward_Exp": 45,
-      "StageImage": "MapIcon_41.sprite",
+      "StageImage": "MapIcon_41",
       "AppearingMonsters": "202074&202080&202083"
     },
     {
@@ -837,7 +837,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 229000,
       "ClearReward_Exp": 45,
-      "StageImage": "MapIcon_42.sprite",
+      "StageImage": "MapIcon_42",
       "AppearingMonsters": "202075&202081&202084"
     },
     {
@@ -857,7 +857,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 235000,
       "ClearReward_Exp": 45,
-      "StageImage": "MapIcon_43.sprite",
+      "StageImage": "MapIcon_43",
       "AppearingMonsters": "202079&202085&202088"
     },
     {
@@ -877,7 +877,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 241000,
       "ClearReward_Exp": 45,
-      "StageImage": "MapIcon_44.sprite",
+      "StageImage": "MapIcon_44",
       "AppearingMonsters": "202086&202092&202095"
     },
     {
@@ -897,7 +897,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 246000,
       "ClearReward_Exp": 45,
-      "StageImage": "MapIcon_45.sprite",
+      "StageImage": "MapIcon_45",
       "AppearingMonsters": "202081&202087&202090"
     },
     {
@@ -917,7 +917,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 252000,
       "ClearReward_Exp": 50,
-      "StageImage": "MapIcon_46.sprite",
+      "StageImage": "MapIcon_46",
       "AppearingMonsters": "202085&202091&202094"
     },
     {
@@ -937,7 +937,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 257000,
       "ClearReward_Exp": 50,
-      "StageImage": "MapIcon_47.sprite",
+      "StageImage": "MapIcon_47",
       "AppearingMonsters": "202086&202092&202095"
     },
     {
@@ -957,7 +957,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 263000,
       "ClearReward_Exp": 5,
-      "StageImage": "MapIcon_48.sprite",
+      "StageImage": "MapIcon_48",
       "AppearingMonsters": "202087&202093&202096"
     },
     {
@@ -977,7 +977,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 268000,
       "ClearReward_Exp": 50,
-      "StageImage": "MapIcon_49.sprite",
+      "StageImage": "MapIcon_49",
       "AppearingMonsters": "202091&202097&202053"
     },
     {
@@ -997,7 +997,7 @@
       "ThirdWaveClearRewardItemValue": 50,
       "ClearReward_Gold": 274000,
       "ClearReward_Exp": 50,
-      "StageImage": "MapIcon_50.sprite",
+      "StageImage": "MapIcon_50",
       "AppearingMonsters": "202092&202098&202054"
     }
   ]
