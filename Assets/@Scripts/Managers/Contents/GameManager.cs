@@ -7,8 +7,6 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using static Define;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -276,6 +274,71 @@ public class GameManager
         }
     }
 
+    //public int CommonGachaOpenCount
+    //{
+    //    get { return _gameData.CommonGachaOpenCount; }
+    //    set
+    //    {
+    //        _gameData.CommonGachaOpenCount = value;
+    //        Managers.Achievement.CommonOpen();
+    //    }
+    //}
+    //public int AdvancedGachaOpenCount
+    //{
+    //    get { return _gameData.AdvancedGachaOpenCount; }
+    //    set
+    //    {
+    //        _gameData.AdvancedGachaOpenCount = value;
+    //        Managers.Achievement.AdvancedOpen();
+    //    }
+    //}
+    //public int FastRewardCount
+    //{
+    //    get { return _gameData.FastRewardCount; }
+    //    set
+    //    {
+    //        _gameData.FastRewardCount = value;
+    //        Managers.Achievement.FastReward();
+    //    }
+    //}
+    //public int OfflineRewardCount
+    //{
+    //    get { return _gameData.OfflineRewardCount; }
+    //    set
+    //    {
+    //        _gameData.OfflineRewardCount = value;
+    //        Managers.Achievement.OfflineReward();
+    //    }
+    //}
+    //public int TotalMonsterKillCount
+    //{
+    //    get { return _gameData.TotalMonsterKillCount; }
+    //    set
+    //    {
+    //        _gameData.TotalMonsterKillCount = value;
+    //        if (value % 100 == 0)
+    //            Managers.Achievement.MonsterKill();
+    //    }
+    //}
+    //public int TotalEliteKillCount
+    //{
+    //    get { return _gameData.TotalEliteKillCount; }
+    //    set
+    //    {
+    //        _gameData.TotalEliteKillCount = value;
+    //        Managers.Achievement.EliteKill();
+    //    }
+    //}
+    //public int TotalBossKillCount
+    //{
+    //    get { return _gameData.TotalBossKillCount; }
+    //    set
+    //    {
+    //        _gameData.TotalBossKillCount = value;
+    //        Managers.Achievement.BossKill();
+    //    }
+    //}
+
     public ContinueData ContinueInfo
     {
         get { return _gameData.ContinueInfo; }
@@ -287,6 +350,19 @@ public class GameManager
         get { return _gameData.CurrentStage; }
         set { _gameData.CurrentStage = value; }
     }
+
+    public WaveData CurrentWaveData
+    {
+        get { return CurrentStageData.WaveArray[CurrentWaveIndex]; }
+    }
+
+    public int CurrentWaveIndex
+    {
+        get { return _gameData.ContinueInfo.WaveIndex; }
+        set { _gameData.ContinueInfo.WaveIndex = value; }
+    }
+
+    //public Map CurrentMap { get; set; }
 
     #endregion
 
@@ -344,6 +420,30 @@ public class GameManager
             _gameData.StaminaCountAds = value;
         }
     }
+
+    #region Character
+    public Character CurrentCharacter
+    {
+        get
+        {
+            return _gameData.Characters.Find(c => c.isCurrentCharacter == true);
+        }
+    }
+    #endregion
+
+    #region Player
+    public PlayerController Player { get; set; }
+    Vector2 _moveDir;
+    public Vector2 MoveDir
+    {
+        get { return _moveDir; }
+        set
+        {
+            _moveDir = value;
+            OnMoveDirChanged?.Invoke(_moveDir);
+        }
+    }
+    #endregion
 
     #region Action
     public event Action<Vector2> OnMoveDirChanged;
@@ -446,7 +546,7 @@ public class GameManager
         //    _gameData.ContinueInfo.SavedSupportSkill = Player.Skills?.SupportSkills;
         //}
         string jsonStr = JsonConvert.SerializeObject(_gameData);
-        File.WriteAllText(_path, jsonStr);
+        //File.WriteAllText(_path, jsonStr);
     }
 
     public void ClearContinueData()

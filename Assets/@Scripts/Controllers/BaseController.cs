@@ -7,6 +7,6 @@ using Event = Spine.Event;
 
 public class BaseController : MonoBehaviour
 {
-
+    public Define.EObjectType ObjectType { get; protected set; }
 }
 
