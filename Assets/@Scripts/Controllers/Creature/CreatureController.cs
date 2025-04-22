@@ -34,4 +34,49 @@ public class CreatureController : BaseController
     public virtual float MoveSpeed { get; set; }
     //public virtual SkillBook Skills { get; set; }
 
+    public Vector3 CenterPosition
+    {
+        get
+        {
+            return _offset.bounds.center;
+        }
+    }
+    public float ColliderRadius { get; set; }
+
+    private Collider2D _offset;
+    Define.ECreatureState _creatureState = Define.ECreatureState.Moving;
+    public virtual Define.ECreatureState CreatureState
+    {
+        get { return _creatureState; }
+        set
+        {
+            _creatureState = value;
+            UpdateAnimation();
+        }
+    }
+
+    public virtual void UpdateAnimation() { }
+
+    public virtual void OnDamaged(BaseController attacker, SkillBase skill = null, float damage = 0)
+    {
+
+    }
+
+    public virtual void Healing(float amount, bool isEffect = true) { }
+
+    public bool IsMonster()
+    {
+        switch (ObjectType)
+        {
+            case Define.EObjectType.Boss:
+            case Define.EObjectType.Monster:
+            case Define.EObjectType.EliteMonster:
+                return true;
+            case Define.EObjectType.Player:
+            case Define.EObjectType.Projectile:
+                return false; ;
+            default:
+                return false;
+        }
+    }
 }

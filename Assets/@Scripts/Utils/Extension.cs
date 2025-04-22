@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -20,7 +20,12 @@ public static class Extension
     {
         return go != null && go.activeSelf;
     }
-   
+
+    public static bool IsValid(this BaseController bc)
+    {
+        return bc != null && bc.isActiveAndEnabled;
+    }
+
     public static void MakeMask(this ref LayerMask mask, List<Define.ELayer> list)
     {
         foreach (Define.ELayer layer in list)

@@ -40,4 +40,18 @@ public class PlayerController : CreatureController
     public Action OnPlayerMove;
 
 
+
+    public Vector3 PlayerCenterPos { get { return Indicator.transform.position; } }
+    public Vector3 PlayerDirection { get { return (IndicatorSprite.transform.position - PlayerCenterPos).normalized; } }
+
+    public override void Healing(float amount, bool isEffect = true)
+    {
+        //if (amount == 0) return;
+        //float res = ((MaxHp * amount) * HealBonusRate);
+        //if (res == 0) return;
+        //Hp = Hp + res;
+        //Managers.Object.ShowDamageFont(CenterPosition, 0, res, transform);
+        //if (isEffect)
+        //    Managers.Resource.Instantiate("HealEffect", transform);
+    }
 }
