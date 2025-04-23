@@ -182,6 +182,28 @@ public class ObjectManager
         return null;
     }
 
+    public List<MonsterController> GetNearestMonsters(int count = 1, int distanceThreshold = 0)
+    {
+        List<MonsterController> monsterList = Monsters.OrderBy(monster => (Player.CenterPosition - monster.CenterPosition).sqrMagnitude).ToList();
+
+        if (distanceThreshold > 0)
+            monsterList = monsterList.Where(monster => (Player.CenterPosition - monster.CenterPosition).magnitude > distanceThreshold).ToList();
+
+        int min = Mathf.Min(count, monsterList.Count);
+
+        List<MonsterController> nearestMonsters = monsterList.Take(min).ToList();
+
+        if (nearestMonsters.Count == 0) return null;
+
+        // 요소 개수가 count와 다른 경우 마지막 요소 반복해서 추가
+        while (nearestMonsters.Count < count)
+        {
+            nearestMonsters.Add(nearestMonsters.Last());
+        }
+
+        return nearestMonsters;
+    }
+
     // TODO ILHAK
     public List<MonsterController> GetMonsterWithinCamera(int count = 1)
     {

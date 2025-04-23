@@ -6,7 +6,7 @@ public abstract class RepeatSkill : SkillBase
 {
     public float CoolTime { get; set; } = 1.0f;
 
-    protected void Awake()
+    protected override void Awake()
     {
         base.Awake();
     }
