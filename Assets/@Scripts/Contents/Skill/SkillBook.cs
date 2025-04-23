@@ -179,7 +179,7 @@ public class SkillBook : MonoBehaviour
     #region 서포트스킬 보너스 추가 
     public void GeneralSupportSkillBonus(SupportSkillData skill)
     {
-        List<SupportSkillData> generalList = SupportSkills.Where(skill => skill.SupportSkillType == SupportSkillType.General).ToList();
+        //List<SupportSkillData> generalList = SupportSkills.Where(skill => skill.SupportSkillType == SupportSkillType.General).ToList();
 
         //PlayerController player = Managers.Game.Player;
         //player.CriRate += skill.CriRate;
