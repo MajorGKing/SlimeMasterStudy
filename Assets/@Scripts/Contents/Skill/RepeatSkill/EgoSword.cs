@@ -8,15 +8,6 @@ public class EgoSword : RepeatSkill
     private ParticleSystem[] _swingParticle;
     float _radian;
 
-    protected enum ESwingType
-    {
-        First,
-        Secend,
-        Thrid,
-        fourth,
-        //Effect
-    }
-
     protected override void Awake()
     {
         base.Awake();
