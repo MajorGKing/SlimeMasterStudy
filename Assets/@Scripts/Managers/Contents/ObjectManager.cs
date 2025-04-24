@@ -39,7 +39,19 @@ public class ObjectManager
 
     public void Clear()
     {
+        Monsters.Clear();
+        //Gems.Clear();
+        //Souls.Clear();
+        Projectiles.Clear();
+    }
 
+    public void LoadMap(string mapName)
+    {
+        GameObject objMap = Managers.Resource.Instantiate(mapName);
+        objMap.transform.position = Vector3.zero;
+        objMap.name = "@Map";
+
+        objMap.GetComponent<Map>().Init();
     }
 
     public GameObject SpawnGameObject(Vector3 position, string prefabName)

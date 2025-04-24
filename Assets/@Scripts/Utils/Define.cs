@@ -40,6 +40,15 @@ public class Define
     public static readonly float MAPSIZE_REDUCTION_VALUE = 0.9f; // 웨이브 시작시 줄어드는 맵 크기
     #endregion
 
+    #region sortingOrder
+    public static readonly int UI_GAMESCENE_SORT_CLOSED = 321;
+    public static readonly int SOUL_SORT = 105;
+
+    //소울이 이동중일때 오더 변경
+    public static readonly int UI_GAMESCENE_SORT_OPEN = 323;
+    public static readonly int SOUL_SORT_GETITEM = 322;
+    #endregion
+
     #region Enum
     public enum EScene
     {

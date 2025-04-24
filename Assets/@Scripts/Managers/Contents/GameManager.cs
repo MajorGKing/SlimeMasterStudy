@@ -362,7 +362,7 @@ public class GameManager
         set { _gameData.ContinueInfo.WaveIndex = value; }
     }
 
-    //public Map CurrentMap { get; set; }
+    public Map CurrentMap { get; set; }
 
     #endregion
 
