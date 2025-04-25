@@ -9,4 +9,9 @@ public class MonsterController : CreatureController
     {
 
     }
+
+    public override void OnDead()
+    {
+
+    }
 }

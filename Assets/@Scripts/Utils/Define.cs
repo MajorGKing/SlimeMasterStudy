@@ -8,6 +8,20 @@ public class Define
     public const char MAP_TOOL_WALL = '0';
     public const char MAP_TOOL_NONE = '1';
 
+    //데이터 아이디에 따른 포션 회복량
+    public static readonly Dictionary<int, float> DicPotionAmount = new Dictionary<int, float>
+    {
+          { 60001, 0.3f }, // 에픽 등급 랜덤 장비 상자 
+          { 60002, 0.5f }, // 골드
+          { 60003, 1 }, // 랜덤 스크롤
+    };
+
+    public static float POTION_COLLECT_DISTANCE = 2.6F;
+    public static float BOX_COLLECT_DISTANCE = 2.6F;
+    public static int STAMINA_RECHARGE_INTERVAL = 300;
+    public static int MAX_SKILL_LEVEL = 6;
+    public static int MAX_SKILL_COUNT = 6;
+
     #region 데이터아이디
     public static int ID_GOLD = 50001;
     public static int ID_DIA = 50002;
@@ -28,6 +42,13 @@ public class Define
     public static int ID_BOOTS_SCROLL = 50106;
 
     public static string GOLD_SPRITE_NAME = "Gold_Icon";
+    #endregion
+
+    #region 보석 경험치 획득량
+    public const int SMALL_EXP_AMOUNT = 1;
+    public const int GREEN_EXP_AMOUNT = 2;
+    public const int BLUE_EXP_AMOUNT = 5;
+    public const int YELLOW_EXP_AMOUNT = 10;
     #endregion
 
     public static int MAX_STAMINA = 50;
@@ -395,6 +416,14 @@ public class Define
         Goblin,
         Snake,
         GoblinLoad,
+    }
+
+    public enum EGemType
+    {
+        Small,
+        Green,
+        Blue,
+        Yellow
     }
     #endregion
 }

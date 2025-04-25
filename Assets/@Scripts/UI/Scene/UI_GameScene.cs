@@ -1,6 +1,9 @@
+using System.Collections;
 using System.Linq;
 using Data;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 using static Define;
 
 public class UI_GameScene : UI_Scene
@@ -8,7 +11,26 @@ public class UI_GameScene : UI_Scene
     #region Enum
     enum GameObjects
     {
+        ExpSliderObject,
+        WaveObject,
+        SoulImage,
+        OnDamaged,
+        SoulShopObject,
+        SupportSkillCardListObject,
+        OwnBattleSkillInfoObject,
+        //TotalDamageContentObject,
+        SupportSkillListScrollObject,
+        SupportSkillListScrollContentObject,
+        WhiteFlash,
+        MonsterAlarmObject,
+        BossAlarmObject,
 
+        EliteInfoObject,
+        EliteHpSliderObject,
+        BossInfoObject,
+        BossHpSliderObject,
+
+        BattleSkillSlotGroupObject,
     }
 
     enum Images
@@ -65,5 +87,37 @@ public class UI_GameScene : UI_Scene
     public void SetInfo()
     {
 
+    }
+
+    public void OnDamaged()
+    {
+        StartCoroutine(CoBloodScreen());
+    }
+    public void DoWhiteFlash()
+    {
+        StartCoroutine(CoWhiteScreen());
+    }
+
+
+    IEnumerator CoBloodScreen()
+    {
+        Color targetColor = new Color(1, 0, 0, 0.3f);
+
+        yield return null;
+        Sequence seq = DOTween.Sequence();
+
+        seq.Append(GetObject((int)GameObjects.OnDamaged).GetComponent<Image>().DOColor(targetColor, 0.3f))
+            .Append(GetObject((int)GameObjects.OnDamaged).GetComponent<Image>().DOColor(Color.clear, 0.3f)).OnComplete(() => { });
+    }
+
+    IEnumerator CoWhiteScreen()
+    {
+        Color targetColor = new Color(1, 1, 1, 1f);
+
+        yield return null;
+        Sequence seq = DOTween.Sequence();
+
+        seq.Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(1, 0.1f))
+            .Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(0, 0.2f)).OnComplete(() => { });
     }
 }

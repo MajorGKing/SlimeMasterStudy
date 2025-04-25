@@ -28,8 +28,8 @@ public class ObjectManager
 
     public PlayerController Player { get; private set; }
     public HashSet<MonsterController> Monsters { get; } = new HashSet<MonsterController>();
-    //public HashSet<GemController> Gems { get; } = new HashSet<GemController>();
-    //public HashSet<SoulController> Souls { get; } = new HashSet<SoulController>();
+    public HashSet<GemController> Gems { get; } = new HashSet<GemController>();
+    public HashSet<SoulController> Souls { get; } = new HashSet<SoulController>();
     //public HashSet<DropItemController> DropItems { get; } = new HashSet<DropItemController>();
     public HashSet<ProjectileController> Projectiles { get; } = new HashSet<ProjectileController>();
 
@@ -194,6 +194,11 @@ public class ObjectManager
         return null;
     }
 
+    public void Despawn<T>(T obj) where T : BaseController
+    {
+
+    }
+
     public List<MonsterController> GetNearestMonsters(int count = 1, int distanceThreshold = 0)
     {
         List<MonsterController> monsterList = Monsters.OrderBy(monster => (Player.CenterPosition - monster.CenterPosition).sqrMagnitude).ToList();
@@ -222,5 +227,40 @@ public class ObjectManager
         return null;
     }
 
+    public void KillAllMonsters()
+    {
+        UI_GameScene scene = Managers.UI.SceneUI as UI_GameScene;
+
+        if (scene != null)
+            scene.DoWhiteFlash();
+        foreach (MonsterController monster in Monsters.ToList())
+        {
+            if (monster.ObjectType == Define.EObjectType.Monster)
+                monster.OnDead();
+        }
+        DespawnAllMonsterProjectiles();
+    }
+
+    public void DespawnAllMonsterProjectiles()
+    {
+        foreach (ProjectileController proj in Projectiles.ToList())
+        {
+            if (proj.Skill.SkillType == Define.ESkillType.MonsterSkill_01)
+                Despawn(proj);
+        }
+    }
+
+    public void CollectAllItems()
+    {
+        foreach (GemController gem in Gems.ToList())
+        {
+            gem.GetItem();
+        }
+
+        foreach (SoulController soul in Souls.ToList())
+        {
+            soul.GetItem();
+        }
+    }
 
 }

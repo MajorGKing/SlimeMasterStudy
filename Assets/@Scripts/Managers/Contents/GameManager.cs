@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -518,6 +519,15 @@ public class GameManager
 
 
     #region InGame
+
+    public GemInfo GetGemInfo(Define.EGemType type)
+    {
+        if (type == Define.EGemType.Small)
+            return new GemInfo(Define.EGemType.Small, new Vector3(0.65f, 0.65f, 0.65f));
+
+        return new GemInfo(type, Vector3.one);
+    }
+
     public (int hp, int atk) GetCurrentChracterStat()
     {
         int hpBonus = 0;

@@ -67,6 +67,16 @@ public static class Utils
         return null;
     }
 
+    public static Vector2 RandomPointInAnnulus(Vector2 origin, float minRadius = 6, float maxRadius = 12)
+    {
+        float randomDist = Random.Range(minRadius, maxRadius);
+
+        Vector2 randomDir = new Vector2(Random.Range(-100, 100), Random.Range(-100, 100)).normalized;
+        //Debug.Log(randomDir);
+        var point = origin + randomDir * randomDist;
+        return point;
+    }
+
     public static Color HexToColor(string color)
     {
         Color parsedColor;

@@ -79,4 +79,9 @@ public class CreatureController : BaseController
                 return false;
         }
     }
+
+    public virtual void OnDead()
+    {
+
+    }
 }
