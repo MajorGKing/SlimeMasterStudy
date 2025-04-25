@@ -458,6 +458,8 @@ public class GameManager
     public bool IsLoaded = false;
     public bool IsGameEnd = false;
 
+    public CameraController CameraController { get; set; }
+
     public void ExchangeMaterial(MaterialData data, int count)
     {
         switch (data.MaterialType)
@@ -517,6 +519,15 @@ public class GameManager
         SaveGame();
     }
 
+    public void RemovMaterialItem(int id, int quantity)
+    {
+        if (ItemDictionary.ContainsKey(id))
+        {
+            ItemDictionary[id] -= quantity;
+            SaveGame();
+        }
+    }
+
 
     #region InGame
 
@@ -526,6 +537,14 @@ public class GameManager
             return new GemInfo(Define.EGemType.Small, new Vector3(0.65f, 0.65f, 0.65f));
 
         return new GemInfo(type, Vector3.one);
+    }
+
+    public void GameOver()
+    {
+        IsGameEnd = true;
+        Player.StopAllCoroutines();
+        // TODO ILHAK
+        //Managers.UI.ShowPopupUI<UI_GameoverPopup>().SetInfo();
     }
 
     public (int hp, int atk) GetCurrentChracterStat()

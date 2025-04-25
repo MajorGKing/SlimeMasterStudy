@@ -120,4 +120,10 @@ public class UI_GameScene : UI_Scene
         seq.Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(1, 0.1f))
             .Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(0, 0.2f)).OnComplete(() => { });
     }
+
+    // TODO ILHAK
+    public void MonsterInfoUpdate(MonsterController monster)
+    {
+
+    }
 }

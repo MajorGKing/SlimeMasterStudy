@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,13 @@ using UnityEngine;
 // TODO ILHAK
 public class MonsterController : CreatureController
 {
-    public override void OnDamaged(BaseController attacker, SkillBase skill, float damage = 0)
-    {
+    float _timer;
 
-    }
+    Data.SkillData skillData;
 
-    public override void OnDead()
-    {
+    Coroutine _coMoving;
+    Coroutine _coDotDamage;
+    public event Action OnBossDead;
 
-    }
+    public event Action<MonsterController> MonsterInfoUpdate;
 }

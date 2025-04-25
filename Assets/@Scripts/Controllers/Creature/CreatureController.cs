@@ -61,7 +61,7 @@ public class CreatureController : BaseController
     {
 
     }
-
+    public virtual void UpdatePlayerStat() { }
     public virtual void Healing(float amount, bool isEffect = true) { }
 
     public bool IsMonster()
@@ -83,5 +83,15 @@ public class CreatureController : BaseController
     public virtual void OnDead()
     {
 
+    }
+
+    public void Resurrection(float healRate, float moveSpeed = 0, float atkRate = 0)
+    {
+        Healing(healRate, false);
+        Managers.Resource.Instantiate("Revival", transform);
+        MoveSpeedRate += moveSpeed;
+        AttackRate += atkRate;
+        UpdatePlayerStat();
+        Managers.Object.KillAllMonsters();
     }
 }
