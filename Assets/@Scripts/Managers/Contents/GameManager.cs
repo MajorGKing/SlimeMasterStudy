@@ -506,6 +506,11 @@ public class GameManager
         }
     }
 
+    public void SetNextStage()
+    {
+        CurrentStageData = Managers.Data.StageDic[CurrentStageData.StageIndex + 1];
+    }
+
     public void AddMaterialItem(int id, int quantity)
     {
         if (ItemDictionary.ContainsKey(id))

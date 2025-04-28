@@ -32,7 +32,7 @@ public class CreatureController : BaseController
     public virtual float DamageReduction { get; set; }
     public virtual float MoveSpeedRate { get; set; } = 1;
     public virtual float MoveSpeed { get; set; }
-    //public virtual SkillBook Skills { get; set; }
+    public virtual SkillBook Skills { get; set; }
 
     public Vector3 CenterPosition
     {
@@ -83,6 +83,16 @@ public class CreatureController : BaseController
     public virtual void OnDead()
     {
 
+    }
+
+    public virtual void InitCreatureStat(bool isFullHp = true)
+    {
+        float waveRate = Managers.Game.CurrentWaveData.HpIncreaseRate;
+        //보스, 플레이어빼고  엘리트, 몬스터만
+        MaxHp = (CreatureData.MaxHp + (CreatureData.MaxHpBonus * Managers.Game.CurrentStageData.StageLevel)) * (CreatureData.HpRate + waveRate);
+        Atk = (CreatureData.Atk + (CreatureData.AtkBonus * Managers.Game.CurrentStageData.StageLevel)) * CreatureData.AtkRate;
+        Hp = MaxHp;
+        MoveSpeed = CreatureData.MoveSpeed * CreatureData.MoveSpeedRate;
     }
 
     public void Resurrection(float healRate, float moveSpeed = 0, float atkRate = 0)

@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class GameScene : BaseScene
 {
@@ -191,14 +190,30 @@ public class GameScene : BaseScene
             //보스 출현
             for (int i = 0; i < _game.CurrentWaveData.BossId.Count; i++)
             {
-                // TODO ILHAK after boss
-                //_boss = Managers.Object.Spawn<BossController>(spawnPos, _game.CurrentWaveData.BossId[i]);
-                //_boss.MonsterInfoUpdate -= _ui.MonsterInfoUpdate;
-                //_boss.MonsterInfoUpdate += _ui.MonsterInfoUpdate;
-                //_boss.OnBossDead -= OnBossDead;
-                //_boss.OnBossDead += OnBossDead;
+                _boss = Managers.Object.Spawn<BossController>(spawnPos, _game.CurrentWaveData.BossId[i]);
+                _boss.MonsterInfoUpdate -= _ui.MonsterInfoUpdate;
+                _boss.MonsterInfoUpdate += _ui.MonsterInfoUpdate;
+                _boss.OnBossDead -= OnBossDead;
+                _boss.OnBossDead += OnBossDead;
             }
         }
+    }
+
+    void OnBossDead()
+    {
+        StartCoroutine(CoGameEnd());
+    }
+
+    IEnumerator CoGameEnd()
+    {
+        yield return new WaitForSeconds(1f);
+        isGameEnd = true;
+        if (Managers.Game.DicMission.TryGetValue(Define.EMissionTarget.StageClear, out MissionInfo mission))
+            mission.Progress++;
+
+        Managers.Game.IsGameEnd = true;
+        UI_GameResultPopup cp = Managers.UI.ShowPopupUI<UI_GameResultPopup>();
+        cp.SetInfo();
     }
 
     public void GenerateRandomExperience(int n)
@@ -236,7 +251,6 @@ public class GameScene : BaseScene
             gp.SetInfo();
         }
     }
-
 
     void SpawnWaveReward()
     {

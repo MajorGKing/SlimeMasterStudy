@@ -99,4 +99,22 @@ public class UI_ContinuePopup : UI_Popup
         Managers.UI.ClosePopupUI(this);
         Managers.Game.GameOver();
     }
+
+    IEnumerator CountdownCoroutine()
+    {
+        int count = 10;
+
+        while (count > 0)
+        {
+            yield return new WaitForSecondsRealtime(1f);
+            count--;
+            GetText((int)Texts.CountdownValueText).text = count.ToString();
+            if (count == 0)
+                break;
+        }
+        yield return new WaitForSecondsRealtime(1f);
+
+        Managers.UI.ClosePopupUI(this);
+        Managers.Game.GameOver();
+    }
 }
