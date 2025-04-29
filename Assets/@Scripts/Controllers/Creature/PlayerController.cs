@@ -1,3 +1,4 @@
+using Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -191,6 +192,37 @@ public class PlayerController : CreatureController
             Managers.Game.ContinueInfo.SoulCount = Mathf.Round(value);
 
             OnPlayerDataUpdated?.Invoke();
+        }
+    }
+
+    public float ExpRatio
+    {
+        get
+        {
+            LevelData currentLevelData;
+            if (Managers.Data.LevelDataDic.TryGetValue(Level, out currentLevelData))
+            {
+                int currentLevelExp = currentLevelData.TotalExp;
+                int nextLevelExp = currentLevelExp;
+                int previousLevelExp = 0;
+
+                LevelData prevLevelData;
+                if (Managers.Data.LevelDataDic.TryGetValue(Level - 1, out prevLevelData))
+                {
+                    previousLevelExp = prevLevelData.TotalExp;
+                }
+
+                // 만렙이 아닌 경우
+                LevelData nextLevelData;
+                if (Managers.Data.LevelDataDic.TryGetValue(Level + 1, out nextLevelData))
+                {
+                    nextLevelExp = nextLevelData.TotalExp;
+                }
+
+                return (float)(Exp - previousLevelExp) / (currentLevelExp - previousLevelExp);
+            }
+
+            return 0f;
         }
     }
 

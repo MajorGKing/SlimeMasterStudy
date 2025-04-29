@@ -591,5 +591,17 @@ public class GameManager
         //CurrentWaveIndex = 0;
         SaveGame();
     }
+
+    public float GetTotalDamage()
+    {
+        float result = 0;
+
+        foreach (SkillBase skill in Player.Skills.SkillList)
+        {
+            result += skill.TotalDamage;
+        }
+
+        return result;
+    }
     #endregion
 }

@@ -12,13 +12,10 @@ public class UIManager
     private int _pupupOrder = 100;
 
     private Stack<UI_Popup> _popupStack = new Stack<UI_Popup>();
-    private UI_Scene _sceneUI = null;
 
-    public UI_Scene SceneUI
-    {
-        set { _sceneUI = value; }
-        get { return _sceneUI; }
-    }
+    public UI_Scene SceneUI { get; private set; }
+
+    public event Action<int> OnTimeScaleChanged;
 
     private Dictionary<string, UI_Popup> _popups = new Dictionary<string, UI_Popup>();
 
@@ -76,7 +73,7 @@ public class UIManager
 
     public T GetSceneUI<T>() where T : UI_Base
     {
-        return _sceneUI as T;
+        return SceneUI as T;
     }
 
     public T MakeWorldSpaceUI<T>(Transform parent = null, string name = null) where T : UI_Base
@@ -113,7 +110,7 @@ public class UIManager
 
         GameObject go = Managers.Resource.Instantiate($"{name}");
         T sceneUI = Utils.GetOrAddComponent<T>(go);
-        _sceneUI = sceneUI;
+        SceneUI = sceneUI;
 
         go.transform.SetParent(Root.transform);
 
@@ -197,6 +194,26 @@ public class UIManager
     {
         CloseAllPopupUI();
         Time.timeScale = 1;
-        _sceneUI = null;
+        SceneUI = null;
     }
+
+    #region 임시
+    bool _isActiveSoulShop = false;
+    public bool IsActiveSoulShop
+    {
+        get { return _isActiveSoulShop; }
+        set
+        {
+            _isActiveSoulShop = value;
+
+            if (_isActiveSoulShop == true)
+                Time.timeScale = 0;
+            else
+                Time.timeScale = 1;
+
+            DOTween.timeScale = 1;
+            OnTimeScaleChanged?.Invoke((int)Time.timeScale);
+        }
+    }
+    #endregion
 }

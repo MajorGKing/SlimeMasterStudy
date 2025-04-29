@@ -33,7 +33,6 @@ RectTransform:
   m_Children:
   - {fileID: 347837394202087540}
   m_Father: {fileID: 347837394663175214}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -127,7 +126,6 @@ RectTransform:
   - {fileID: 2233607090531902869}
   - {fileID: 2233607091854569158}
   m_Father: {fileID: 347837394057258303}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -210,7 +208,6 @@ RectTransform:
   - {fileID: 7496721807654714760}
   - {fileID: 347837394057258303}
   m_Father: {fileID: 5596140528406543956}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -333,7 +330,6 @@ RectTransform:
   - {fileID: 5298569925976757620}
   - {fileID: 347837394663175214}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -357,7 +353,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 102
   m_TargetDisplay: 0
@@ -410,7 +408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2112547576820011123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18af768e9fb5e5d40aca0b4d0c60966d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5de5cd99a7b1f0d4cbb25c2ece9dfaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3355462438798547487
@@ -446,7 +444,6 @@ RectTransform:
   m_Children:
   - {fileID: 6432492727584239676}
   m_Father: {fileID: 5596140528406543956}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -567,7 +564,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 347837394663175214}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -663,7 +659,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5298569925976757620}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -799,7 +794,6 @@ RectTransform:
   m_Children:
   - {fileID: 5282228980037469359}
   m_Father: {fileID: 347837394663175214}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -875,7 +869,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7496721807654714760}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -984,6 +977,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 347837394202087540}
     m_Modifications:
     - target: {fileID: 1455864784134832496, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
@@ -1123,6 +1117,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
 --- !u!224 &347837394085637173 stripped
 RectTransform:
@@ -1145,6 +1142,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 347837394202087540}
     m_Modifications:
     - target: {fileID: 1455864784134832496, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
@@ -1288,6 +1286,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
 --- !u!114 &45643174968476422 stripped
 MonoBehaviour:
@@ -1310,6 +1311,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 347837394202087540}
     m_Modifications:
     - target: {fileID: 1455864784134832496, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
@@ -1453,6 +1455,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
 --- !u!114 &45643175299394421 stripped
 MonoBehaviour:
@@ -1475,6 +1480,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 347837394202087540}
     m_Modifications:
     - target: {fileID: 1455864784134832496, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
@@ -1618,6 +1624,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
 --- !u!114 &45643174144673877 stripped
 MonoBehaviour:
@@ -1640,6 +1649,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 347837394202087540}
     m_Modifications:
     - target: {fileID: 1455864784134832496, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
@@ -1783,6 +1793,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9dc4c96e4177a4e8e66895ca9893c9, type: 3}
 --- !u!114 &45643174171620692 stripped
 MonoBehaviour:

@@ -61,6 +61,19 @@ public class Define
     public static readonly float MAPSIZE_REDUCTION_VALUE = 0.9f; // 웨이브 시작시 줄어드는 맵 크기
     #endregion
 
+    #region 가챠 확률
+    public static readonly float[] SOUL_SHOP_COST_PROB = new float[]
+    {
+        0,
+        45,   // Common 가격
+        55,   // Uncommon 가격
+        80,  // Rare 가격
+        160,  // Epic 가격
+        320,  // Legend 가격
+        80,   // 리롤 가격
+    };
+    #endregion
+
     #region sortingOrder
     public static readonly int UI_GAMESCENE_SORT_CLOSED = 321;
     public static readonly int SOUL_SORT = 105;

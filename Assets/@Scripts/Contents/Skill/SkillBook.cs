@@ -219,5 +219,9 @@ public class SkillBook : MonoBehaviour
 
     // TODO ILHAK
     #region 스킬 가챠
+    public List<SkillBase> RecommendSkills()
+    {
+        return SkillList;
+    }
     #endregion
 }
