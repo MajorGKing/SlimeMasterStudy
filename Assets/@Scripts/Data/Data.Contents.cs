@@ -269,50 +269,50 @@ namespace Data
         public bool IsLocked = false;
         public bool IsPurchased = false;
 
-        //public bool CheckRecommendationCondition()
-        //{
-        //    if (IsLocked == true || Managers.Game.SoulShopList.Contains(this) == true)
-        //    {
-        //        return false;
-        //    }
+        public bool CheckRecommendationCondition()
+        {
+            if (IsLocked == true || Managers.Game.SoulShopList.Contains(this) == true)
+            {
+                return false;
+            }
 
-        //    if (SupportSkillType == Define.ESupportSkillType.Special)
-        //    {
-        //        //내가 가지고 있는 장비스킬이 아니면 false
-        //        if (Managers.Game.EquippedEquipments.TryGetValue(Define.EEquipmentType.Weapon, out Equipment myWeapon))
-        //        {
-        //            int skillId = myWeapon.EquipmentData.BasicSkill;
-        //            Define.ESkillType type = Utils.GetSkillTypeFromInt(skillId);
+            if (SupportSkillType == Define.ESupportSkillType.Special)
+            {
+                //내가 가지고 있는 장비스킬이 아니면 false
+                if (Managers.Game.EquippedEquipments.TryGetValue(Define.EEquipmentType.Weapon, out Equipment myWeapon))
+                {
+                    int skillId = myWeapon.EquipmentData.BasicSkill;
+                    Define.ESkillType type = Utils.GetSkillTypeFromInt(skillId);
 
-        //            switch (SupportSkillName)
-        //            {
-        //                case Define.ESupportSkillName.ArrowShot:
-        //                case Define.ESupportSkillName.SavageSmash:
-        //                case Define.ESupportSkillName.PhotonStrike:
-        //                case Define.ESupportSkillName.Shuriken:
-        //                case Define.ESupportSkillName.EgoSword:
-        //                    if (SupportSkillName.ToString() != type.ToString())
-        //                        return false;
-        //                    break;
-        //            }
+                    switch (SupportSkillName)
+                    {
+                        case Define.ESupportSkillName.ArrowShot:
+                        case Define.ESupportSkillName.SavageSmash:
+                        case Define.ESupportSkillName.PhotonStrike:
+                        case Define.ESupportSkillName.Shuriken:
+                        case Define.ESupportSkillName.EgoSword:
+                            if (SupportSkillName.ToString() != type.ToString())
+                                return false;
+                            break;
+                    }
 
-        //        }
-        //    }
-        //    #region 서포트 스킬 중복 방지 모드 보류
-        //    //if (Managers.Game.Player.Skills.SupportSkills.TryGetValue(SupportSkillName, out var existingSkill))
-        //    //{
-        //    //    if (existingSkill == null)
-        //    //        return true;
+                }
+            }
+            #region 서포트 스킬 중복 방지 모드 보류
+            //if (Managers.Game.Player.Skills.SupportSkills.TryGetValue(SupportSkillName, out var existingSkill))
+            //{
+            //    if (existingSkill == null)
+            //        return true;
 
-        //    //    if (DataId <= existingSkill.DataId)
-        //    //    {
-        //    //        return false;
-        //    //    }
-        //    //}
-        //    #endregion
+            //    if (DataId <= existingSkill.DataId)
+            //    {
+            //        return false;
+            //    }
+            //}
+            #endregion
 
-        //    return true;
-        //}
+            return true;
+        }
     }
     [Serializable]
     public class SupportSkillDataLoader : ILoader<int, SupportSkillData>

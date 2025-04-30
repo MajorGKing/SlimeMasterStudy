@@ -179,54 +179,213 @@ public class SkillBook : MonoBehaviour
     #region 서포트스킬 보너스 추가 
     public void GeneralSupportSkillBonus(SupportSkillData skill)
     {
-        //List<SupportSkillData> generalList = SupportSkills.Where(skill => skill.SupportSkillType == SupportSkillType.General).ToList();
+        List<SupportSkillData> generalList = SupportSkills.Where(skill => skill.SupportSkillType == Define.ESupportSkillType.General).ToList();
 
-        //PlayerController player = Managers.Game.Player;
-        //player.CriRate += skill.CriRate;
-        //player.MaxHpBonusRate += skill.HpRate;
-        //player.ExpBonusRate += skill.ExpBonusRate;
-        //player.AttackRate += skill.AtkRate;
-        //player.DefRate += skill.DefRate;
-        //player.DamageReduction += skill.DamageReduction;
-        //player.SoulBonusRate += skill.SoulBonusRate;
-        //player.HealBonusRate += skill.HealBonusRate;
-        //player.MoveSpeedRate += skill.MoveSpeedRate;
-        //player.HpRegen += skill.HpRegen;
-        //player.CriDamage += skill.CriDmg;
-        //player.CollectDistBonus += skill.MagneticRange;
+        PlayerController player = Managers.Game.Player;
+        player.CriRate += skill.CriRate;
+        player.MaxHpBonusRate += skill.HpRate;
+        player.ExpBonusRate += skill.ExpBonusRate;
+        player.AttackRate += skill.AtkRate;
+        player.DefRate += skill.DefRate;
+        player.DamageReduction += skill.DamageReduction;
+        player.SoulBonusRate += skill.SoulBonusRate;
+        player.HealBonusRate += skill.HealBonusRate;
+        player.MoveSpeedRate += skill.MoveSpeedRate;
+        player.HpRegen += skill.HpRegen;
+        player.CriDamage += skill.CriDmg;
+        player.CollectDistBonus += skill.MagneticRange;
 
-        //player.UpdatePlayerStat();
+        player.UpdatePlayerStat();
     }
 
-    // TODO ILHAK
     public void OnPlayerLevelUpBonus()
     {
+        List<SupportSkillData> passiveSkills = SupportSkills.Where(skill => skill.SupportSkillType == Define.ESupportSkillType.LevelUp).ToList();
 
+        float moveRate = 0;
+        float atkRate = 0;
+        float criRate = 0;
+        float cridmg = 0;
+        float reduceDamage = 0;
+
+        foreach (SupportSkillData passive in passiveSkills)
+        {
+            if (passive.SupportSkillName == Define.ESupportSkillName.Resurrection)
+                continue;
+            moveRate += passive.MoveSpeedRate;
+            atkRate += passive.AtkRate;
+            criRate += passive.CriRate;
+            cridmg += passive.CriDmg;
+            reduceDamage += passive.DamageReduction;
+        }
+
+        PlayerController player = Managers.Game.Player;
+        player.MoveSpeedRate += moveRate;
+        player.AttackRate += atkRate;
+        player.CriRate += criRate;
+        player.CriDamage += cridmg;
+        player.DamageReduction += reduceDamage;
+
+        player.UpdatePlayerStat();
     }
 
-    // TODI ILHAK
     public void OnMonsterKillBonus()
     {
+        List<SupportSkillData> passiveSkills = SupportSkills.Where(skill => skill.SupportSkillType == Define.ESupportSkillType.MonsterKill).ToList();
+        float dmgReduction = 0;
+        float atkRate = 0;
+        float healAmount = 0;
+        foreach (SupportSkillData passive in passiveSkills)
+        {
+            if (passive.SupportSkillName == Define.ESupportSkillName.Resurrection)
+                continue;
+            dmgReduction += passive.DamageReduction;
+            atkRate += passive.AtkRate;
+            healAmount += passive.HealRate;
+        }
 
+        PlayerController player = Managers.Game.Player;
+        player.DamageReduction += dmgReduction;
+        player.AttackRate += atkRate;
+
+        player.UpdatePlayerStat();
+        Managers.Game.Player.Healing(healAmount);
     }
 
-    // TODO ILHAK
     public void OnEliteDeadBonus()
     {
+        List<SupportSkillData> passiveSkills = SupportSkills.Where(skill => skill.SupportSkillType == Define.ESupportSkillType.EliteKill).ToList();
 
+        float soulCount = 0;
+        float expBonus = 0;
+
+        foreach (SupportSkillData passive in passiveSkills)
+        {
+            if (passive.SupportSkillName == Define.ESupportSkillName.Resurrection)
+                continue;
+            soulCount += passive.SoulAmount;
+            expBonus += passive.ExpBonusRate;
+        }
+
+        PlayerController player = Managers.Game.Player;
+        player.SoulCount += soulCount;
+        player.ExpBonusRate += expBonus;
     }
     #endregion
 
-    // TODO ILHAK
     #region 스킬 가챠
+    public SkillBase RecommandDropSkill()
+    {
+        List<SkillBase> skillList = Managers.Game.Player.Skills.SkillList.ToList();
+        List<SkillBase> activeSkills = skillList.FindAll(skill => skill.IsLearnedSkill);
+
+        List<SkillBase> recommendSkills = activeSkills.FindAll(s => s.Level < 5);
+        recommendSkills.Shuffle();
+        
+        return recommendSkills[0];
+    }
+
     public List<SkillBase> RecommendSkills()
     {
-        return SkillList;
+        List<SkillBase> skillList = Managers.Game.Player.Skills.SkillList.ToList();
+        List<SkillBase> activeSkills = skillList.FindAll(skill => skill.IsLearnedSkill);
+
+        //1. 이미 6개의 스킬을 배웠으면 배운 스킬중 5렙 미만인 스킬을 추천
+        if (activeSkills.Count == MAX_SKILL_COUNT)
+        {
+            List<SkillBase> recommendSkills = activeSkills.FindAll(s => s.Level < MAX_SKILL_LEVEL);
+            recommendSkills.Shuffle();
+            //Util.Shuffle(recommandSkills);
+            return recommendSkills.Take(3).ToList();
+        }
+        else
+        {
+            // 레벨이 5 미만인 스킬 
+            List<SkillBase> recommendSkills = skillList.FindAll(s => s.Level < MAX_SKILL_LEVEL);
+            recommendSkills.Shuffle();
+            //Util.Shuffle(recommandSkills);
+            return recommendSkills.Take(3).ToList();
+        }
     }
 
     public List<SupportSkillData> RecommendSupportkills()
     {
-        return null;
+        GameManager game = Managers.Game;
+        game.SoulShopList.Clear();
+
+        //1. Lock 된 스킬이 있는지 확인하고 추가하기
+        foreach (SupportSkillData skill in LockedSupportSkills)
+        {
+            skill.IsLocked = true;
+            game.SoulShopList.Add(skill);
+        }
+
+        int recommandCount = 4 - game.SoulShopList.Count;
+
+        for (int i = 0; i < recommandCount; i++)
+        {
+            //1. 등급 가챠
+            Define.ESupportSkillGrade grade = GetRandomGrade();
+            // 2. 해당 등급 스킬 목록 가져오기
+            List<SupportSkillData> skills = GetSupportSkills(grade);
+
+            if (skills.Count > 0)
+                game.SoulShopList.Add(skills[UnityEngine.Random.Range(0, skills.Count)]);
+            else
+                AddRecommendSkills(grade);
+        }
+
+        return game.SoulShopList;
+    }
+
+    public static Define.ESupportSkillGrade GetRandomGrade()
+    {
+        float randomValue = UnityEngine.Random.value;
+        if (randomValue < SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Common])
+        {
+            return Define.ESupportSkillGrade.Common;
+        }
+        else if (randomValue < SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Common] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Uncommon])
+        {
+            return Define.ESupportSkillGrade.Uncommon;
+        }
+        else if (randomValue < SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Common] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Uncommon] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Epic])
+        {
+            return Define.ESupportSkillGrade.Epic;
+        }
+        else if (randomValue < SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Common] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Uncommon] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Epic] + SUPPORTSKILL_GRADE_PROB[(int)Define.ESupportSkillGrade.Rare])
+        {
+            return Define.ESupportSkillGrade.Rare;
+        }
+        else
+        {
+            return Define.ESupportSkillGrade.Legend;
+        }
+    }
+
+
+
+    private List<SupportSkillData> GetSupportSkills(Define.ESupportSkillGrade grade)
+    {
+        return Managers.Data.SupportSkillDic.Values
+                .Where(skill => skill.SupportSkillGrade == grade && skill.CheckRecommendationCondition())
+                .ToList();
+    }
+
+    private void AddRecommendSkills(Define.ESupportSkillGrade grade)
+    {
+        if ((int)grade > Enum.GetValues(typeof(Define.ESupportSkillGrade)).Length)
+            return;
+        List<SupportSkillData> commonSkills = new List<SupportSkillData>();
+        Define.ESupportSkillGrade nextGrade = grade + 1;
+
+        // 2. 해당 등급 스킬 목록 가져오기
+        commonSkills = GetSupportSkills(nextGrade);
+
+        if (commonSkills.Count > 0)
+            Managers.Game.SoulShopList.Add(commonSkills[UnityEngine.Random.Range(0, commonSkills.Count)]);
+        else
+            AddRecommendSkills(nextGrade);
     }
     #endregion
 }

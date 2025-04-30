@@ -62,6 +62,22 @@ public class Define
     #endregion
 
     #region 가챠 확률
+    public static readonly float[] SUPPORTSKILL_GRADE_PROB = new float[]
+    {
+        //0.04f,   // Common 확률
+        //0.04f,   // Uncommon 확률
+        //0.01f,   // Rare 확률
+        //0.5f,  // Epic 확률
+        //0.45f,  // Legend 확률
+
+        0.4f,   // Common 확률
+        0.4f,   // Uncommon 확률
+        0.1f,   // Rare 확률
+        0.07f,  // Epic 확률
+        0.03f,  // Legend 확률
+
+    };
+
     public static readonly float[] SOUL_SHOP_COST_PROB = new float[]
     {
         0,

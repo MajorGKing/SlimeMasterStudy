@@ -164,5 +164,22 @@ public static class Utils
 
         Debug.LogError("AuthServer IPv4 Failed");
         return null;
-    } 
+    }
+
+    public static Define.ESkillType GetSkillTypeFromInt(int value)
+    {
+        foreach (Define.ESkillType skillType in Enum.GetValues(typeof(Define.ESkillType)))
+        {
+            int minValue = (int)skillType;
+            int maxValue = minValue + 5; // 100501~ 100506 사이 값이면 100501값 리턴
+
+            if (value >= minValue && value <= maxValue)
+            {
+                return skillType;
+            }
+        }
+
+        Debug.LogError($" Faild add skill : {value}");
+        return Define.ESkillType.None;
+    }
 }
