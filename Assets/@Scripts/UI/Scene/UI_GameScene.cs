@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,7 +96,6 @@ public class UI_GameScene : UI_Scene
     private float updateInterval = 0.3f;
 
     GameManager _game;
-    Coroutine _coWaveAlarm;
 
     bool _isSupportSkillListButton = false;
 
@@ -187,7 +187,7 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.CharacterLevelValueText).text = $"{_game.Player.Level}";
         GetText((int)Texts.KillValueText).text = $"{_game.Player.KillCount}";
         GetText((int)Texts.SoulValueText).text = _game.Player.SoulCount.ToString();
-        
+
         LayoutRebuilder.ForceRebuildLayoutImmediate(GetObject((int)GameObjects.WaveObject).GetComponent<RectTransform>());
     }
 
@@ -273,23 +273,50 @@ public class UI_GameScene : UI_Scene
 
         if (list.Count > 0)
         {
-            //Managers.UI.ShowPopupUI<UI_SkillSelectPopup>();
+            Managers.UI.ShowPopupUI<UI_SkillSelectPopup>();
         }
+
+        GetSlider((int)Sliders.ExpSliderObject).value = _game.Player.ExpRatio;
+        GetText((int)Texts.CharacterLevelValueText).text = $"{_game.Player.Level}";
     }
 
     private void OnLevelUpSkill()
     {
+        ClearSkillSlot();
 
+        //배틀스킬아이콘
+        List<SkillBase> activeSkills = Managers.Game.Player.Skills.SkillList.Where(skill => skill.IsLearnedSkill).ToList();
+        for (int i = 0; i < activeSkills.Count; i++)
+            AddSkillSlot(i, activeSkills[i].SkillData.IconLabel);
+
+        //서포트스킬 
+        int index = 6;// 서포트스킬 enum이 6번부터 시작함
+        int count = Mathf.Min(6, Managers.Game.Player.Skills.SupportSkills.Count);
+        for (int i = 0; i < count; i++)
+            AddSkillSlot(i + index, Managers.Game.Player.Skills.SupportSkills[i].IconLabel);
+
+        GetText((int)Texts.SupportSkillCountValueText).text = Managers.Game.Player.Skills.SupportSkills.Count.ToString();
     }
 
     private void OnPlayerMove()
     {
-
+        Vector2 uiPos = GetObject((int)GameObjects.SoulImage).transform.position;
+        Managers.Game.SoulDestination = uiPos;
     }
 
     private void SetBattleSkill()
     {
+        GameObject container = GetObject((int)GameObjects.BattleSkillSlotGroupObject);
+        //초기화
+        foreach (Transform child in container.transform)
+            Managers.Resource.Destroy(child.gameObject);
 
+        //전투스킬
+        foreach (SkillBase skill in Managers.Game.Player.Skills.ActivatedSkills)
+        {
+            UI_SkillSlotItem item = Managers.UI.MakeSubItem<UI_SkillSlotItem>(container.transform);
+            item.GetComponent<UI_SkillSlotItem>().SetInfo(skill.SkillData.IconLabel, skill.Level);
+        }
     }
 
     public void OnDamaged()
@@ -321,6 +348,25 @@ public class UI_GameScene : UI_Scene
 
         seq.Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(1, 0.1f))
             .Append(GetObject((int)GameObjects.WhiteFlash).GetComponent<Image>().DOFade(0, 0.2f)).OnComplete(() => { });
+    }
+
+    IEnumerator SwitchAlarm(AlramType type)
+    {
+        switch (type)
+        {
+            case AlramType.wave:
+                Managers.Sound.Play(Define.ESound.Effect, "Warning_Wave");
+                GetObject((int)GameObjects.MonsterAlarmObject).gameObject.SetActive(true);
+                yield return new WaitForSeconds(3f);
+                GetObject((int)GameObjects.MonsterAlarmObject).gameObject.SetActive(false);
+                break;
+            case AlramType.boss:
+                Managers.Sound.Play(Define.ESound.Effect, "Warning_Boss");
+                GetObject((int)GameObjects.BossAlarmObject).gameObject.SetActive(true);
+                yield return new WaitForSeconds(3f);
+                GetObject((int)GameObjects.BossAlarmObject).gameObject.SetActive(false);
+                break;
+        }
     }
 
     public void MonsterInfoUpdate(MonsterController monster)
@@ -383,17 +429,46 @@ public class UI_GameScene : UI_Scene
 
     private void SoulShopInit()
     {
+        // 영혼 상점 플로팅
+        GetObject((int)GameObjects.SoulShopObject).GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1);
+        GetObject((int)GameObjects.SoulShopObject).GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0);
+        GetObject((int)GameObjects.SoulShopObject).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 700);
 
+        PopupOpenAnimation(GetObject((int)GameObjects.SoulShopObject));
+        GetButton((int)Buttons.SoulShopCloseButton).gameObject.SetActive(true); // 영혼 상점 버튼 활성화
+        GetButton((int)Buttons.SoulShopLeadButton).gameObject.SetActive(false);
+        GetButton((int)Buttons.SoulShopBackgroundButton).gameObject.SetActive(true); // 영혼 상점 배경
+        GetObject((int)GameObjects.OwnBattleSkillInfoObject).gameObject.SetActive(true); // 배틀 스킬 리스트 활성화
+        PopupOpenAnimation(GetObject((int)GameObjects.OwnBattleSkillInfoObject));
+        GetObject((int)GameObjects.SupportSkillListScrollObject).gameObject.SetActive(false); // 서포트 스킬 리스트 비활성화
+        _isSupportSkillListButton = false;
+        Managers.UI.IsActiveSoulShop = true;
     }
 
-    private void ResetSupportCard()
+    private void ResetSupportCard() // 서포트스킬 카드 네장 보여주기
     {
+        GameObject supportSkillContainer = GetObject((int)GameObjects.SupportSkillCardListObject);
+        supportSkillContainer.DestroyChildren();
+        Managers.Game.SoulShopList.Clear();
 
+        foreach (SupportSkillData supportSkill in Managers.Game.Player.Skills.RecommendSupportkills())
+        {
+            supportSkill.IsPurchased = false;
+            UI_SupportCardItem skillData = Managers.UI.MakeSubItem<UI_SupportCardItem>(supportSkillContainer.transform);
+            skillData.SetInfo(supportSkill);
+        }
     }
 
-    private void LoadSupportCard()
+    private void LoadSupportCard() // 서포트 스킬 카드 보여주기
     {
+        GameObject supportSkillContainer = GetObject((int)GameObjects.SupportSkillCardListObject);
+        supportSkillContainer.DestroyChildren();
 
+        foreach (SupportSkillData supportSkill in Managers.Game.SoulShopList)
+        {
+            UI_SupportCardItem skillData = Managers.UI.MakeSubItem<UI_SupportCardItem>(supportSkillContainer.transform);
+            skillData.SetInfo(supportSkill);
+        }
     }
 
     private void ResetSupportSkillList()
@@ -409,5 +484,52 @@ public class UI_GameScene : UI_Scene
             item.SetInfo(skill, this.transform, scrollRect);
             Managers.Game.SoulShopList.Add(skill);
         }
+    }
+
+    void AddSkillSlot(int index, string iconLabel)
+    {
+        GetImage(index).sprite = Managers.Resource.Load<Sprite>(iconLabel);
+        GetImage(index).enabled = true;
+    }
+
+    void ClearSkillSlot()
+    {
+        int count = Enum.GetValues(typeof(Images)).Length;
+        for (int i = 0; i < count; i++)
+        {
+            GetImage(i).enabled = false;
+        }
+    }
+
+    public void OnWaveStart(int currentStageIndex)
+    {
+        GetText((int)Texts.WaveValueText).text = currentStageIndex.ToString();
+    }
+
+    public void OnSecondChange(int time)
+    {
+        //웨이브 시작 3초전 웨이브 알람
+        if (time == 3 && Managers.Game.CurrentWaveIndex < 9)
+        {
+            StartCoroutine(SwitchAlarm(AlramType.wave));
+        }
+
+        //보스 등장 3초전 보스 알람
+        if (_game.CurrentWaveData.BossId.Count > 0)
+        {
+            int bossGenTime = Define.BOSS_GEN_TIME;
+            if (time == bossGenTime)
+                StartCoroutine(SwitchAlarm(AlramType.boss));
+        }
+
+        GetText((int)Texts.TimeLimitValueText).text = time.ToString();
+        if (time == 0)
+            GetText((int)Texts.TimeLimitValueText).text = "";
+    }
+
+    public void OnWaveEnd()
+    {
+        // 몬스터 웨이브 알람 
+        GetObject((int)GameObjects.MonsterAlarmObject).gameObject.SetActive(false);
     }
 }

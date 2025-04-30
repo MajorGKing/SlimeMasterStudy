@@ -120,8 +120,8 @@ public class UI_SkillSelectPopup : UI_Popup
 
         foreach (SkillBase skill in List)
         {
-            //UI_SkillCardItem item = Managers.UI.MakeSubItem<UI_SkillCardItem>(container.transform);
-            //item.GetComponent<UI_SkillCardItem>().SetInfo(skill);
+            UI_SkillCardItem item = Managers.UI.MakeSubItem<UI_SkillCardItem>(container.transform);
+            item.GetComponent<UI_SkillCardItem>().SetInfo(skill);
         }
     }
 

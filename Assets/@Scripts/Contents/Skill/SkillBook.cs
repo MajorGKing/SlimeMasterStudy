@@ -223,5 +223,10 @@ public class SkillBook : MonoBehaviour
     {
         return SkillList;
     }
+
+    public List<SupportSkillData> RecommendSupportkills()
+    {
+        return null;
+    }
     #endregion
 }
