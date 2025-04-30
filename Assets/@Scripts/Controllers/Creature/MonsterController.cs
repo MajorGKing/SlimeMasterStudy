@@ -60,4 +60,9 @@ public class MonsterController : CreatureController
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+    public override void OnDeathAnimationEnd()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -239,4 +239,9 @@ public class PlayerController : CreatureController
         //if (isEffect)
         //    Managers.Resource.Instantiate("HealEffect", transform);
     }
+
+    public override void OnDeathAnimationEnd()
+    {
+        
+    }
 }

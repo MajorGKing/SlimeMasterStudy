@@ -175,6 +175,17 @@ public class SkillBook : MonoBehaviour
         #endregion
     }
 
+    public void OnSkillBookChanged()
+    {
+        UpdateSkillUi?.Invoke();
+    }
+
+    public void Clear()
+    {
+        SavedBattleSkill.Clear();
+        SupportSkills.Clear();
+    }
+
 
     #region 서포트스킬 보너스 추가 
     public void GeneralSupportSkillBonus(SupportSkillData skill)

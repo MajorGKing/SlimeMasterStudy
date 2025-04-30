@@ -54,6 +54,19 @@ public class ObjectManager
         objMap.GetComponent<Map>().Init();
     }
 
+    public void ShowDamageFont(Vector2 pos, float damage, float healAmount, Transform parent, bool isCritical = false)
+    {
+        string prefabName;
+        if (isCritical)
+            prefabName = "CriticalDamageFont";
+        else
+            prefabName = "DamageFont";
+
+        GameObject go = Managers.Resource.Instantiate(prefabName, pooling: true);
+        DamageFont damageText = go.GetOrAddComponent<DamageFont>();
+        damageText.SetInfo(pos, damage, healAmount, parent, isCritical);
+    }
+
     public GameObject SpawnGameObject(Vector3 position, string prefabName)
     {
         GameObject go = Managers.Resource.Instantiate(prefabName, pooling: true);
