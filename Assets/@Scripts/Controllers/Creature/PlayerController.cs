@@ -41,6 +41,8 @@ public class PlayerController : CreatureController
     public Action OnPlayerDamaged;
     public Action OnPlayerMove;
 
+    public float _ItemCollectDist { get; } = 4.0f;
+
     public override int DataId
     {
         get { return Managers.Game.ContinueInfo.PlayerDataId; }
@@ -138,7 +140,37 @@ public class PlayerController : CreatureController
     public float Exp
     {
         get { return Managers.Game.ContinueInfo.Exp; }
-        set { }// TODO ILHAK
+        set 
+        {
+            Managers.Game.ContinueInfo.Exp = value;
+
+            // 레벨업 체크
+            int level = Level;
+            while (true)
+            {
+                //만렙인경우 break;
+                LevelData nextLevel;
+                if (Managers.Data.LevelDataDic.TryGetValue(level + 1, out nextLevel) == false)
+                    break;
+
+                LevelData currentLevel;
+                Managers.Data.LevelDataDic.TryGetValue(level, out currentLevel);
+                if (Managers.Game.ContinueInfo.Exp < currentLevel.TotalExp)
+                    break;
+                level++;
+            }
+
+            if (level != Level)
+            {
+                Level = level;
+                LevelData currentLevel;
+                Managers.Data.LevelDataDic.TryGetValue(level, out currentLevel);
+                TotalExp = currentLevel.TotalExp;
+                LevelUp(Level);
+            }
+
+            OnPlayerDataUpdated();
+        }
     }
 
     public float TotalExp
@@ -225,23 +257,266 @@ public class PlayerController : CreatureController
             return 0f;
         }
     }
+    public Vector2 MoveDir
+    {
+        get { return _moveDir; }
+        set { _moveDir = value.normalized; }
+    }
 
     public Vector3 PlayerCenterPos { get { return Indicator.transform.position; } }
     public Vector3 PlayerDirection { get { return (IndicatorSprite.transform.position - PlayerCenterPos).normalized; } }
 
     public override void Healing(float amount, bool isEffect = true)
     {
-        //if (amount == 0) return;
-        //float res = ((MaxHp * amount) * HealBonusRate);
-        //if (res == 0) return;
-        //Hp = Hp + res;
-        //Managers.Object.ShowDamageFont(CenterPosition, 0, res, transform);
-        //if (isEffect)
-        //    Managers.Resource.Instantiate("HealEffect", transform);
+        if (amount == 0) return;
+        float res = ((MaxHp * amount) * HealBonusRate);
+        if (res == 0) return;
+        Hp = Hp + res;
+        Managers.Object.ShowDamageFont(CenterPosition, 0, res, transform);
+        if (isEffect)
+            Managers.Resource.Instantiate("HealEffect", transform);
+    }
+
+    private void OnDestroy()
+    {
+        if (Managers.Game != null)
+            Managers.Game.OnMoveDirChanged -= HandleOnMoveDirChanged;
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        ObjectType = Define.EObjectType.Player;
+
+        Managers.Game.OnMoveDirChanged += HandleOnMoveDirChanged;
+
+        FindObjectOfType<CameraController>()._playerTransform = gameObject.transform;
+        transform.localScale = Vector3.one;
+    }
+
+
+    private void Start()
+    {
+        StartCoroutine(CoSelfRecovery());
+        if (Managers.Game.ContinueInfo.isContinue == true)
+            LoadSkill();
+        else
+            InitSkill();
+    }
+
+    private void Update()
+    {
+        UpdatePlayerDirection();
+        MovePlayer();
+        CollectEnv();
+    }
+
+    public override void InitSkill()
+    {
+        base.InitSkill();
+
+        //장비 스킬 추가
+        Equipment item;
+        Managers.Game.EquippedEquipments.TryGetValue(Define.EEquipmentType.Weapon, out item);
+
+        if (item == null)
+            return;
+
+        // 베이스 스킬
+        Define.ESkillType type = Utils.GetSkillTypeFromInt(item.EquipmentData.BasicSkill);
+        if (type != Define.ESkillType.None)
+        {
+            Skills.AddSkill(type, item.EquipmentData.BasicSkill);
+            Skills.LevelUpSkill(type);
+        }
+
+        Data.SupportSkillData uncommonSkill;
+        Data.SupportSkillData rareSkill;
+        Data.SupportSkillData epicSkill;
+        Data.SupportSkillData legendSkill;
+
+        //등급별 서포트 스킬
+        foreach (Equipment equip in Managers.Game.EquippedEquipments.Values)
+        {
+            switch (equip.EquipmentData.EquipmentGrade)
+            {
+                case Define.EEquipmentGrade.Uncommon:
+                    //UncommonGradeSkill 추가
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.UncommonGradeSkill, out uncommonSkill))
+                        Skills.AddSupportSkill(uncommonSkill);
+                    break;
+                case Define.EEquipmentGrade.Rare:
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.UncommonGradeSkill, out uncommonSkill))
+                        Skills.AddSupportSkill(uncommonSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.RareGradeSkill, out rareSkill))
+                        Skills.AddSupportSkill(rareSkill);
+                    break;
+                case Define.EEquipmentGrade.Epic:
+                case Define.EEquipmentGrade.Epic1:
+                case Define.EEquipmentGrade.Epic2:
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.UncommonGradeSkill, out uncommonSkill))
+                        Skills.AddSupportSkill(uncommonSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.RareGradeSkill, out rareSkill))
+                        Skills.AddSupportSkill(rareSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.EpicGradeSkill, out epicSkill))
+                        Skills.AddSupportSkill(epicSkill);
+                    break;
+                case Define.EEquipmentGrade.Legendary:
+                case Define.EEquipmentGrade.Legendary1:
+                case Define.EEquipmentGrade.Legendary2:
+                case Define.EEquipmentGrade.Legendary3:
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.UncommonGradeSkill, out uncommonSkill))
+                        Skills.AddSupportSkill(uncommonSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.RareGradeSkill, out rareSkill))
+                        Skills.AddSupportSkill(rareSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.EpicGradeSkill, out epicSkill))
+                        Skills.AddSupportSkill(epicSkill);
+                    if (Managers.Data.SupportSkillDic.TryGetValue(equip.EquipmentData.LegendaryGradeSkill, out legendSkill))
+                        Skills.AddSupportSkill(legendSkill);
+                    break;
+            }
+        }
+    }
+
+    public override void InitCreatureStat(bool isFullHp = true)
+    {
+        // 현재 케릭터의 Stat 가져오기
+        MaxHp = Managers.Game.CurrentCharacter.MaxHp;
+        Atk = Managers.Game.CurrentCharacter.Atk;
+        MoveSpeed = CreatureData.MoveSpeed * CreatureData.MoveSpeedRate;
+
+        //장비 합산 데이터 다 가져오기
+        var (equip_hp, equip_attack) = Managers.Game.GetCurrentChracterStat();
+        MaxHp += equip_hp;
+        Atk += equip_attack;
+
+        MaxHp *= MaxHpBonusRate;
+        Atk *= AttackRate;
+        Def *= DefRate;
+        MoveSpeed *= MoveSpeedRate;
+
+        if (isFullHp == true)
+            Hp = MaxHp;
+    }
+
+    private void UpdatePlayerDirection()
+    {
+        if (_moveDir.x < 0)
+            CreatureSprite.flipX = false;
+        else
+            CreatureSprite.flipX = true;
+    }
+
+    private void MovePlayer()
+    {
+        if (CreatureState == Define.ECreatureState.OnDamaged)
+            return;
+
+        _rigidBody.velocity = Vector2.zero;
+
+        Vector3 dir = _moveDir * MoveSpeed * Time.deltaTime;
+        transform.position += dir;
+
+        if (dir != Vector3.zero)
+        {
+            Indicator.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-dir.x, dir.y) * 180 / Mathf.PI);
+            OnPlayerMove?.Invoke();
+        }
+        else
+            _rigidBody.velocity = Vector2.zero;
+    }
+
+    private void CollectEnv()
+    {
+        List<DropItemController> items = Managers.Game.CurrentMap.Grid.GatherObjects(transform.position, _ItemCollectDist + 0.5f);
+
+        foreach (DropItemController item in items)
+        {
+            Vector3 dir = item.transform.position - transform.position;
+            switch (item.itemType)
+            {
+                case Define.EObjectType.DropBox:
+                case Define.EObjectType.Potion:
+                case Define.EObjectType.Magnet:
+                case Define.EObjectType.Bomb:
+                    if (dir.sqrMagnitude <= item.CollectDist * item.CollectDist)
+                    {
+                        item.GetItem();
+                    }
+                    break;
+                default:
+                    float cd = item.CollectDist * CollectDistBonus;
+                    if (dir.sqrMagnitude <= cd * cd)
+                    {
+                        item.GetItem();
+                    }
+                    break;
+            }
+        }
+    }
+
+    public override void OnDead()
+    {
+        OnPlayerDead?.Invoke();
     }
 
     public override void OnDeathAnimationEnd()
     {
         
+    }
+
+    public void OnSafetyZoneExit(BaseController attacker)
+    {
+        float damage = MaxHp * 0.1f;
+        OnDamaged(attacker, null, damage);
+        CreatureSprite.color = new Color(1, 1, 1, 0.5f);
+        OnPlayerDamaged?.Invoke();
+    }
+
+    public void OnSafetyZoneEnter(BaseController attacker)
+    {
+        CreatureSprite.color = new Color(1, 1, 1, 1f);
+    }
+
+    public override void OnDamaged(BaseController attacker, SkillBase skill, float damage = 0)
+    {
+        float totalDamage = 0;
+        CreatureController creatureController = attacker as CreatureController;
+        if (creatureController != null)
+        {
+            //몬스터와 닿았을때
+            if (skill == null)
+                totalDamage = creatureController.Atk;
+            else//몬스터 스킬맞았을때
+                totalDamage = creatureController.Atk + (creatureController.Atk * skill.SkillData.DamageMultiplier);
+        }
+        else// 중력장에 닿았을때
+            totalDamage = damage;
+
+        totalDamage *= 1 - DamageReduction;
+        Managers.Game.CameraController.Shake();
+        base.OnDamaged(attacker, null, totalDamage);
+    }
+
+    void LevelUp(int level = 0)
+    {
+        if (Level > 1)
+            OnPlayerLevelUp?.Invoke();
+
+        Skills.OnPlayerLevelUpBonus();
+    }
+
+    void HandleOnMoveDirChanged(Vector2 dir)
+    {
+        _moveDir = dir;
+    }
+
+    IEnumerator CoSelfRecovery()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            Healing(HpRegen, false);
+        }
     }
 }
