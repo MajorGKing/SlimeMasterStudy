@@ -22,6 +22,16 @@ public class Define
     public static int MAX_SKILL_LEVEL = 6;
     public static int MAX_SKILL_COUNT = 6;
 
+    #region 넉백 데이터
+    /// <summary>
+    ///  KNOCKBACK_SPEED의 스피드로 KNOCKBACK_TIME시간동안 밀려난다.
+    ///  KNOCKBACK_COOLTIME 동안은 넉백이 재발생하지 않는다
+    /// </summary>
+    public static float KNOCKBACK_TIME = 0.1f;// 밀려나는시간
+    public static float KNOCKBACK_SPEED = 10;  // 속도 
+    public static float KNOCKBACK_COOLTIME = 0.5f;
+    #endregion
+
     #region 데이터아이디
     public static int ID_GOLD = 50001;
     public static int ID_DIA = 50002;

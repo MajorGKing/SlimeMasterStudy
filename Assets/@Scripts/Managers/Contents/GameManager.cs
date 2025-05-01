@@ -535,6 +535,25 @@ public class GameManager
 
 
     #region InGame
+    public GemInfo GetGemInfo()
+    {
+        float smallGemChance = CurrentWaveData.SmallGemDropRate;
+        float greenGemChance = CurrentWaveData.GreenGemDropRate + smallGemChance;
+        float blueGemChance = CurrentWaveData.BlueGemDropRate + greenGemChance;
+        float yellowGemChance = CurrentWaveData.YellowGemDropRate + blueGemChance;
+        float rand = Random.value;
+
+        if (rand < smallGemChance)
+            return new GemInfo(Define.EGemType.Small, new Vector3(0.65f, 0.65f, 0.65f));
+        else if (rand < greenGemChance)
+            return new GemInfo(Define.EGemType.Green, Vector3.one);
+        else if (rand < blueGemChance)
+            return new GemInfo(Define.EGemType.Blue, Vector3.one);
+        else if (rand < yellowGemChance)
+            return new GemInfo(Define.EGemType.Yellow, Vector3.one);
+
+        return null;
+    }
 
     public GemInfo GetGemInfo(Define.EGemType type)
     {
