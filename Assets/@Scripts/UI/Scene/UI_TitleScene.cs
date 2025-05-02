@@ -97,7 +97,10 @@ public class UI_TitleScene : UI_Scene
 			if (count == totalCount)
 			{
 				OnAssetLoaded();
-			}
+
+                Managers.Data.Init();
+                Managers.Game.Init();
+            }
 		});
 	}
 

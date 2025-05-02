@@ -100,6 +100,16 @@ public class Define
     };
     #endregion
 
+    #region 디폴트 장비/케릭터 아이디
+    public const int CHARACTER_DEFAULT_ID = 201000;
+    public const string WEAPON_DEFAULT_ID = "N00301";
+    public const string GLOVES_DEFAULT_ID = "N10101";
+    public const string RING_DEFAULT_ID = "N20201";
+    public const string BELT_DEFAULT_ID = "N30101";
+    public const string ARMOR_DEFAULT_ID = "N40101";
+    public const string BOOTS_DEFAULT_ID = "N50101";
+    #endregion
+
     #region sortingOrder
     public static readonly int UI_GAMESCENE_SORT_CLOSED = 321;
     public static readonly int SOUL_SORT = 105;

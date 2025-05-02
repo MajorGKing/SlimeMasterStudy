@@ -1,72 +1,128 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static Define;
 
 public class UI_Joystick : UI_Scene
 {
 	enum GameObjects
 	{
-		JoystickBG,
-		JoystickCursor,
-	}
+        JoystickBG,
+        Handler,
+    }
 
-	private GameObject _background;
-	private GameObject _cursor;
-	private float _radius;
-	private Vector2 _touchPos;
+    private GameObject _handler;
+    private GameObject _joystickBG;
+    private Vector2 _moveDir { get; set; }
+    private Vector2 _joystickTouchPos;
+    private Vector2 _joystickOriginalPos;
+    private float _joystickRadius;
 
-	protected override void Awake()
+    private void OnDestroy()
+    {
+        Managers.UI.OnTimeScaleChanged -= OnTimeScaleChanged;
+    }
+
+    protected override void Awake()
 	{
 		base.Awake();
 
-		BindObjects(typeof(GameObjects));
+        Managers.UI.OnTimeScaleChanged += OnTimeScaleChanged;
 
-		_background = GetObject((int)GameObjects.JoystickBG);
-		_cursor = GetObject((int)GameObjects.JoystickCursor);
-		_radius = _background.GetComponent<RectTransform>().sizeDelta.y / 5;
+        BindObjects(typeof(GameObjects));
+        _handler = GetObject((int)GameObjects.Handler);
 
-		gameObject.BindEvent(OnPointerDown, type: ETouchEvent.PointerDown);
-		gameObject.BindEvent(OnPointerUp, type: ETouchEvent.PointerUp);
-		gameObject.BindEvent(OnDrag, type: ETouchEvent.Drag);
+        _joystickBG = GetObject((int)GameObjects.JoystickBG);
+        _joystickOriginalPos = _joystickBG.transform.position;
+        _joystickRadius = _joystickBG.GetComponent<RectTransform>().sizeDelta.y / 5;
+        gameObject.BindEvent(OnPointerDown, type: Define.ETouchEvent.PointerDown);
+        gameObject.BindEvent(OnPointerUp, type: Define.ETouchEvent.PointerUp);
+        gameObject.BindEvent(OnDrag, type: Define.ETouchEvent.Drag);
 
-		GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
-		GetComponent<Canvas>().worldCamera = Camera.main;
-	}
+        SetActiveJoystick(false);
+    }
 
 	#region Event
+
 	public void OnPointerDown(PointerEventData evt)
 	{
-		_touchPos = Input.mousePosition;
+        SetActiveJoystick(true);
 
-		Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		// _background.transform.position = mouseWorldPos;
-		// _cursor.transform.position = mouseWorldPos;
+        _joystickTouchPos = Input.mousePosition;
 
-		//Managers.Game.JoystickState = ETouchEvent.PointerDown;
-	}
+        if (Managers.Game.JoystickType == Define.EJoystickType.Flexible)
+        {
+            _handler.transform.position = Input.mousePosition;
+            _joystickBG.transform.position = Input.mousePosition;
+        }
+    }
 
-	public void OnPointerUp(PointerEventData evt)
+    public void OnPointerUp()
+    {
+        _moveDir = Vector2.zero;
+        _handler.transform.position = _joystickOriginalPos;
+        _joystickBG.transform.position = _joystickOriginalPos;
+        Managers.Game.MoveDir = _moveDir;
+        SetActiveJoystick(false);
+    }
+
+    public void OnPointerUp(PointerEventData evt)
 	{
-		// _background.transform.position = _touchPos;
-		_cursor.transform.localPosition = Vector3.zero;
-
-		//Managers.Game.MoveDir = Vector2.zero;
-		//Managers.Game.JoystickState = ETouchEvent.PointerUp;
-	}
+        OnPointerUp();
+    }
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		Vector2 touchDir = (eventData.position - _touchPos);
+        Vector2 dragePos = eventData.position;
 
-		float moveDist = Mathf.Min(touchDir.magnitude, _radius);
-		Vector2 moveDir = touchDir.normalized;
-		Vector2 newPosition = _touchPos + moveDir * moveDist;
+        _moveDir = Managers.Game.JoystickType == Define.EJoystickType.Fixed
+            ? (dragePos - _joystickOriginalPos).normalized
+            : (dragePos - _joystickTouchPos).normalized;
 
-		Vector2 worldPos = Camera.main.ScreenToWorldPoint(newPosition);
-		_cursor.transform.position = worldPos;
+        // 조이스틱이 반지름 안에 있는 경우
+        float joystickDist = (dragePos - _joystickOriginalPos).sqrMagnitude;
 
-		//Managers.Game.MoveDir = moveDir;
-		//Managers.Game.JoystickState = ETouchEvent.Drag;
-	}
-	#endregion
+        Vector3 newPos;
+        // 조이스틱이 반지름 안에 있는 경우
+        if (joystickDist < _joystickRadius)
+        {
+            newPos = _joystickTouchPos + _moveDir * joystickDist;
+        }
+        else // 조이스틱이 반지름 밖에 있는 경우
+        {
+            newPos = Managers.Game.JoystickType == Define.EJoystickType.Fixed
+                ? _joystickOriginalPos + _moveDir * _joystickRadius
+                : _joystickTouchPos + _moveDir * _joystickRadius;
+        }
+
+        _handler.transform.position = newPos;
+        Managers.Game.MoveDir = _moveDir;
+    }
+
+    void SetActiveJoystick(bool isActive)
+    {
+        if (isActive == true)
+        {
+            _handler.GetComponent<Image>().DOFade(1, 0.5f);
+            _joystickBG.GetComponent<Image>().DOFade(1, 0.5f);
+        }
+        else
+        {
+            _handler.GetComponent<Image>().DOFade(0, 0.5f);
+            _joystickBG.GetComponent<Image>().DOFade(0, 0.5f);
+        }
+    }
+
+    public void OnTimeScaleChanged(int timeScale)
+    {
+        if (timeScale == 1)
+        {
+            gameObject.SetActive(true);
+            OnPointerUp();
+        }
+        else
+            gameObject.SetActive(false);
+    }
+    #endregion
 }

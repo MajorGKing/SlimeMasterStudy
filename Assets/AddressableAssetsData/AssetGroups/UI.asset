@@ -299,6 +299,114 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26aa75d8ef652d34c8b3baaf6fe47c72
+    m_Address: UI_AchievementItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff22531651dccc04ca6934a3bb778a90
+    m_Address: UI_CharacterItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 261cb1405f377124f973d2490a703c5e
+    m_Address: UI_CheckOutItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3334937219623f4e893cab79c429060
+    m_Address: UI_EquipItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 653b52a4225762c43adfd19249dec287
+    m_Address: UI_GachaRateItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d70cfb68c693d5b4c945321314dcbe5f
+    m_Address: UI_MaterialItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73c74bd14105a8c4b898371cce10e0eb
+    m_Address: UI_MergeEquipItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f99db18f2fc9ea41a72ec13c541b47f
+    m_Address: UI_MissionItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba0f56b5f0aaa714f9966604682aff6f
+    m_Address: UI_MonsterInfoItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f982259da9125047ba3b87d67d00f78
+    m_Address: UI_SkillCardItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f9dc4c96e4177a4e8e66895ca9893c9
+    m_Address: UI_SkillDamageItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30c1e27daae0a56479bbf2eecdfc3712
+    m_Address: UI_SkillSlotItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 292f5acbea17bd74fbe775126aaee332
+    m_Address: UI_StageInfoItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59acdda0e2431ad4e9ce33719200abff
+    m_Address: UI_SupportCardItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82290a0db1d5c3648ac991341c6cacff
+    m_Address: UI_SupportSkillItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e950282f8bf05934b87c2eab2c49b783
+    m_Address: UI_Toast
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7dee9c03c24fd114dba0fbbd966e45e2
+    m_Address: UI_ToolTipItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dd13cb4456f86745a5b14b4de4146ab
+    m_Address: UI_UserInfoItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9094f0f0595c6e147aa68a6f81e2dcaf, type: 2}
   m_SchemaSet:

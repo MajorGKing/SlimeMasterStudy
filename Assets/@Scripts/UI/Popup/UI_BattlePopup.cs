@@ -238,17 +238,6 @@ public class UI_BattlePopup : UI_Popup
                     GetText((int)Texts.SurvivalWaveValueText).text = (info.MaxWaveIndex + 1).ToString();
                     GetObject((int)GameObjects.StageRewardProgressFillArea).GetComponent<Slider>().value = wave + 1;
                 }
-
-                //// 새로운 스테이지
-                //if (Managers.Game.DicStageClearInfo.TryGetValue(_currentStageData.StageIndex - 1, out StageClearInfo PrevInfo) == false)
-                //    return;
-                //if (PrevInfo.isClear == true)
-                //{
-                //    GetText((int)Texts.SurvivalWaveText).gameObject.SetActive(false);
-                //    GetText((int)Texts.SurvivalWaveValueText).gameObject.SetActive(true);
-                //    GetText((int)Texts.SurvivalWaveValueText).text = "기록 없음";
-                //    GetObject((int)GameObjects.StageRewardProgressFillArea).GetComponent<Slider>().value = wave;
-                //}
             }
             #endregion
         }

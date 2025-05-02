@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using static Define;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -164,6 +165,61 @@ public class GameManager
 {
     #region GameData
     private GameData _gameData = new GameData();
+
+    public void Init()
+    {
+        _path = Application.persistentDataPath + "/SaveData.json";
+
+        if (LoadGame())
+            return;
+
+        PlayerPrefs.SetInt("ISFIRST", 1);
+
+        Character character = new Character();
+        character.SetInfo(CHARACTER_DEFAULT_ID);
+        character.isCurrentCharacter = true;
+
+        Characters = new List<Character>();
+        Characters.Add(character);
+
+        CurrentStageData = Managers.Data.StageDic[1];
+
+        foreach (Data.StageData stage in Managers.Data.StageDic.Values)
+        {
+            StageClearInfo info = new StageClearInfo
+            {
+                StageIndex = stage.StageIndex,
+                MaxWaveIndex = 0,
+                isOpenFirstBox = false,
+                isOpenSecondBox = false,
+                isOpenThirdBox = false,
+            };
+            _gameData.DicStageClearInfo.Add(stage.StageIndex, info);
+        }
+
+        //Managers.Time.LastRewardTime = DateTime.Now;
+        //Managers.Time.LastGeneratedStaminaTime = DateTime.Now;
+
+        //SetBaseEquipment();
+
+        //Managers.Achievement.Init();
+
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_BRONZE_KEY], 10);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_GOLD_KEY], 30);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_DIA], 1000);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_GOLD], 100000);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_WEAPON_SCROLL], 15);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_GLOVES_SCROLL], 15);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_RING_SCROLL], 15);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_BELT_SCROLL], 15);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_ARMOR_SCROLL], 15);
+        ExchangeMaterial(Managers.Data.MaterialDic[Define.ID_BOOTS_SCROLL], 15);
+
+        IsLoaded = true;
+        SaveGame();
+    }
+
+
     public List<Equipment> OwnedEquipments
     {
         get { return _gameData.OwnedEquipments; }
@@ -598,8 +654,39 @@ public class GameManager
         //    _gameData.ContinueInfo.SavedBattleSkill = Player.Skills?.SavedBattleSkill;
         //    _gameData.ContinueInfo.SavedSupportSkill = Player.Skills?.SupportSkills;
         //}
-        string jsonStr = JsonConvert.SerializeObject(_gameData);
+        //string jsonStr = JsonConvert.SerializeObject(_gameData);
         //File.WriteAllText(_path, jsonStr);
+    }
+
+    public bool LoadGame()
+    {
+        if (PlayerPrefs.GetInt("ISFIRST", 1) == 1)
+        {
+            string path = Application.persistentDataPath + "/SaveData.json";
+            if (File.Exists(path))
+                File.Delete(path);
+            return false;
+        }
+
+        if (File.Exists(_path) == false)
+            return false;
+
+        string fileStr = File.ReadAllText(_path);
+        GameData data = JsonConvert.DeserializeObject<GameData>(fileStr);
+        if (data != null)
+            _gameData = data;
+
+        EquippedEquipments = new Dictionary<Define.EEquipmentType, Equipment>();
+        for (int i = 0; i < OwnedEquipments.Count; i++)
+        {
+            if (OwnedEquipments[i].IsEquipped)
+            {
+                // TODO ILHAK After Equipment
+                // EquipItem(OwnedEquipments[i].EquipmentData.EquipmentType, OwnedEquipments[i]);
+            }
+        }
+        IsLoaded = true;
+        return true;
     }
 
     public void ClearContinueData()
