@@ -649,13 +649,13 @@ public class GameManager
     public void SaveGame()
     {
         // TODO ILHAK
-        //if (Player != null)
-        //{
-        //    _gameData.ContinueInfo.SavedBattleSkill = Player.Skills?.SavedBattleSkill;
-        //    _gameData.ContinueInfo.SavedSupportSkill = Player.Skills?.SupportSkills;
-        //}
-        //string jsonStr = JsonConvert.SerializeObject(_gameData);
-        //File.WriteAllText(_path, jsonStr);
+        if (Player != null)
+        {
+            _gameData.ContinueInfo.SavedBattleSkill = Player.Skills?.SavedBattleSkill;
+            _gameData.ContinueInfo.SavedSupportSkill = Player.Skills?.SupportSkills;
+        }
+        string jsonStr = JsonConvert.SerializeObject(_gameData);
+        File.WriteAllText(_path, jsonStr);
     }
 
     public bool LoadGame()

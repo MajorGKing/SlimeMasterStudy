@@ -39,41 +39,38 @@ public class SkillBase : BaseController
     //    base.Awake();
     //}
 
-    // TODO ILHAK after SkillBook
     public Data.SkillData UpdateSkillData(int dataId = 0)
     {
 
-        //    int id = 0;
-        //    if (dataId == 0)
-        //        id = Level < 2 ? (int)SkillType : (int)SkillType + Level - 1;
-        //    else
-        //        id = dataId;
+        int id = 0;
+        if (dataId == 0)
+            id = Level < 2 ? (int)SkillType : (int)SkillType + Level - 1;
+        else
+            id = dataId;
 
-        //    SkillData skillData = new Data.SkillData();
+        Data.SkillData skillData = new Data.SkillData();
 
-        //    if (Managers.Data.SkillDic.TryGetValue(id, out skillData) == false)
-        //        return SkillData;
+        if (Managers.Data.SkillDic.TryGetValue(id, out skillData) == false)
+            return SkillData;
 
-        //    foreach (SupportSkillData support in Managers.Game.Player.Skills.SupportSkills)
-        //    {
-        //        if (SkillType.ToString() == support.SupportSkillName.ToString())
-        //        {
-        //            skillData.ProjectileSpacing += support.ProjectileSpacing;
-        //            skillData.Duration += support.Duration;
-        //            skillData.NumProjectiles += support.NumProjectiles;
-        //            skillData.AttackInterval += support.AttackInterval;
-        //            skillData.NumBounce += support.NumBounce;
-        //            skillData.ProjRange += support.ProjRange;
-        //            skillData.RoatateSpeed += support.RoatateSpeed;
-        //            skillData.ScaleMultiplier += support.ScaleMultiplier;
-        //            skillData.NumPenerations += support.NumPenerations;
-        //        }
-        //    }
+        foreach (Data.SupportSkillData support in Managers.Game.Player.Skills.SupportSkills)
+        {
+            if (SkillType.ToString() == support.SupportSkillName.ToString())
+            {
+                skillData.ProjectileSpacing += support.ProjectileSpacing;
+                skillData.Duration += support.Duration;
+                skillData.NumProjectiles += support.NumProjectiles;
+                skillData.AttackInterval += support.AttackInterval;
+                skillData.NumBounce += support.NumBounce;
+                skillData.ProjRange += support.ProjRange;
+                skillData.RoatateSpeed += support.RoatateSpeed;
+                skillData.ScaleMultiplier += support.ScaleMultiplier;
+                skillData.NumPenerations += support.NumPenerations;
+            }
+        }
 
-        //    SkillData = skillData;
-        //    OnChangedSkillData();
-        //    return SkillData;
-
+        SkillData = skillData;
+        OnChangedSkillData();
         return SkillData;
     }
 
