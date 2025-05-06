@@ -77,7 +77,65 @@ public class ObjectManager
 
     public void DespawnGameObject<T>(T obj) where T : BaseController
     {
+        System.Type type = typeof(T);
 
+        if (type == typeof(PlayerController))
+        {
+            // ?
+        }
+
+        else if (type == typeof(MonsterController))
+        {
+            Monsters.Remove(obj as MonsterController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(BossController))
+        {
+            Monsters.Remove(obj as MonsterController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(EliteController))
+        {
+            Monsters.Remove(obj as EliteController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(GemController))
+        {
+            Gems.Remove(obj as GemController);
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as GemController);
+        }
+        else if (type == typeof(SoulController))
+        {
+            Souls.Remove(obj as SoulController);
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as SoulController);
+        }
+        else if (type == typeof(PotionController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as PotionController);
+        }
+        else if (type == typeof(MagnetController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as MagnetController);
+        }
+        else if (type == typeof(BombController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as BombController);
+        }
+        else if (type == typeof(EliteBoxController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as EliteBoxController);
+        }
+        else if (type == typeof(ProjectileController))
+        {
+            Projectiles.Remove(obj as ProjectileController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
     }
 
     public T Spawn<T>(Vector3 position, int templateID = 0, string prefabName = "") where T : BaseController
@@ -234,10 +292,47 @@ public class ObjectManager
         return nearestMonsters;
     }
 
-    // TODO ILHAK
+    
     public List<MonsterController> GetMonsterWithinCamera(int count = 1)
     {
-        return null;
+        List<MonsterController> monsterList = Monsters.ToList().Where(monster => IsWithInCamera(Camera.main.WorldToViewportPoint(monster.CenterPosition)) == true).ToList();
+        monsterList.Shuffle();
+
+        int min = Mathf.Min(count, monsterList.Count);
+
+        List<MonsterController> monsters = monsterList.Take(min).ToList();
+
+        if (monsters.Count == 0) return null;
+
+        while (monsters.Count < count)
+        {
+            monsters.Add(monsters.Last());
+        }
+
+        return monsterList.Take(count).ToList();
+    }
+
+    public List<Transform> GetFindMonstersInFanShape(Vector3 origin, Vector3 forward, float radius = 2, float angleRange = 80)
+    {
+        List<Transform> listMonster = new List<Transform>();
+        LayerMask targetLayer = LayerMask.GetMask("Monster", "Boss");
+        RaycastHit2D[] _targets = Physics2D.CircleCastAll(origin, radius, Vector2.zero, 0, targetLayer);
+
+        // 타겟중에 부채꼴 안에 있는애만 리스트에 넣는다.
+        foreach (RaycastHit2D target in _targets)
+        {
+            // '타겟-origin 벡터'와 '내 정면 벡터'를 내적
+            float dot = Vector3.Dot((target.transform.position - origin).normalized, forward);
+            // 두 벡터 모두 단위 벡터이므로 내적 결과에 cos의 역을 취해서 theta를 구함
+            float theta = Mathf.Acos(dot);
+            // angleRange와 비교하기 위해 degree로 변환
+            float degree = Mathf.Rad2Deg * theta;
+            // 시야각 판별
+            if (degree <= angleRange / 2f)
+                listMonster.Add(target.transform);
+        }
+
+        return listMonster;
     }
 
     public void KillAllMonsters()
@@ -274,6 +369,13 @@ public class ObjectManager
         {
             soul.GetItem();
         }
+    }
+
+    bool IsWithInCamera(Vector3 pos)
+    {
+        if (pos.x >= 0 && pos.x <= 1 && pos.y >= 0 && pos.y <= 1)
+            return true;
+        return false;
     }
 
 }

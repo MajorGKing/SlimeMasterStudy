@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ProjectileController : SkillBase
@@ -206,18 +207,17 @@ public class ProjectileController : SkillBase
     {
         while (true)
         {
-            // TODO ILHAK after PoisonFieldEffect
-            //transform.position = Vector2.MoveTowards(this.transform.position, _target, Time.deltaTime * Skill.SkillData.ProjSpeed);
+            transform.position = Vector2.MoveTowards(this.transform.position, _target, Time.deltaTime * Skill.SkillData.ProjSpeed);
 
-            //if (transform.position == _target)
-            //{
-            //    string effectName = skill.Level == 6 ? "PoisonFieldEffect_Final" : "PoisonFieldEffect";
+            if (transform.position == _target)
+            {
+                string effectName = skill.Level == 6 ? "PoisonFieldEffect_Final" : "PoisonFieldEffect";
 
-            //    GameObject fireEffect = Managers.Resource.Instantiate(effectName, pooling: true);
-            //    fireEffect.GetComponent<PoisonFieldEffect>().SetInfo(Managers.Game.Player, skill);
-            //    fireEffect.transform.position = _target;
-            //    DestroyProjectile();
-            //}
+                GameObject fireEffect = Managers.Resource.Instantiate(effectName, pooling: true);
+                fireEffect.GetComponent<PoisonFieldEffect>().SetInfo(Managers.Game.Player, skill);
+                fireEffect.transform.position = _target;
+                DestroyProjectile();
+            }
 
             yield return new WaitForFixedUpdate();
         }
@@ -235,6 +235,18 @@ public class ProjectileController : SkillBase
         {
             yield return new WaitForSeconds(5f);
             DestroyProjectile();
+        }
+    }
+
+    IEnumerator CoStartDotDamage()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            foreach (CreatureController target in _enteredColliderList)
+            {
+                target.OnDamaged(Owner, Skill);
+            }
         }
     }
 
@@ -301,107 +313,106 @@ public class ProjectileController : SkillBase
         DestroyProjectile();
     }
 
-    // TODO ILHAK after MonsterSkill_01, FrozenHeart
-    //void BounceProjectile(CreatureController creature)
-    //{
-    //    List<Transform> list = new List<Transform>();
-    //    list = Managers.Object.GetFindMonstersInFanShape(creature.CenterPosition, _dir, 5.5f, 240);
+    void BounceProjectile(CreatureController creature)
+    {
+        List<Transform> list = new List<Transform>();
+        list = Managers.Object.GetFindMonstersInFanShape(creature.CenterPosition, _dir, 5.5f, 240);
 
-    //    List<Transform> sortedList = (from t in list
-    //                                  orderby Vector3.Distance(t.position, transform.position) descending
-    //                                  select t).ToList();
+        List<Transform> sortedList = (from t in list
+                                      orderby Vector3.Distance(t.position, transform.position) descending
+                                      select t).ToList();
 
-    //    if (sortedList.Count == 0)
-    //    {
-    //        DestroyProjectile();
-    //    }
-    //    else
-    //    {
-    //        int index = Random.Range(sortedList.Count / 2, sortedList.Count);
-    //        _dir = (sortedList[index].position - transform.position).normalized;
-    //        _rigid.velocity = _dir * Skill.SkillData.BounceSpeed;
-    //    }
-    //}
+        if (sortedList.Count == 0)
+        {
+            DestroyProjectile();
+        }
+        else
+        {
+            int index = Random.Range(sortedList.Count / 2, sortedList.Count);
+            _dir = (sortedList[index].position - transform.position).normalized;
+            _rigid.velocity = _dir * Skill.SkillData.BounceSpeed;
+        }
+    }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    FrozenHeart frozenHeart = collision.transform.GetComponent<FrozenHeart>();
-    //    if (frozenHeart != null)
-    //    {
-    //        DestroyProjectile();
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        FrozenHeart frozenHeart = collision.transform.GetComponent<FrozenHeart>();
+        if (frozenHeart != null)
+        {
+            DestroyProjectile();
+        }
+    }
 
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    MonsterSkill_01 monsterProj = GetComponent<MonsterSkill_01>();
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        MonsterSkill_01 monsterProj = GetComponent<MonsterSkill_01>();
 
-    //    if (collision.transform.parent != null && monsterProj != null)
-    //    {
-    //        FrozenHeart frozenHeart = collision.transform.parent.transform.GetComponent<FrozenHeart>();
-    //        if (frozenHeart != null)
-    //        {
-    //            DestroyProjectile();
-    //        }
-    //    }
+        if (collision.transform.parent != null && monsterProj != null)
+        {
+            FrozenHeart frozenHeart = collision.transform.parent.transform.GetComponent<FrozenHeart>();
+            if (frozenHeart != null)
+            {
+                DestroyProjectile();
+            }
+        }
 
 
-    //    CreatureController creature = collision.transform.GetComponent<CreatureController>();
-    //    if (creature.IsValid() == false)
-    //        return;
-    //    if (this.IsValid() == false)
-    //        return;
+        CreatureController creature = collision.transform.GetComponent<CreatureController>();
+        if (creature.IsValid() == false)
+            return;
+        if (this.IsValid() == false)
+            return;
 
-    //    switch (Skill.SkillType)
-    //    {
-    //        case Define.ESkillType.IcicleArrow:
-    //        case Define.ESkillType.MonsterSkill_01:
-    //        case Define.ESkillType.SpinShot:
-    //        case Define.ESkillType.CircleShot:
-    //        case Define.ESkillType.PhotonStrike:
-    //            _numPenerations--;
-    //            if (_numPenerations < 0)
-    //            {
-    //                _rigid.velocity = Vector3.zero;
-    //                DestroyProjectile();
-    //            }
-    //            break;
-    //        case Define.ESkillType.Shuriken:
-    //        case Define.ESkillType.EnergyBolt:
-    //            _bounceCount--;
-    //            BounceProjectile(creature);
-    //            if (_bounceCount < 0)
-    //            {
-    //                _rigid.velocity = Vector3.zero;
-    //                DestroyProjectile();
-    //            }
-    //            break;
-    //        case Define.ESkillType.WindCutter:
-    //            _enteredColliderList.Add(creature);
-    //            if (_coDotDamage == null)
-    //                _coDotDamage = StartCoroutine(CoStartDotDamage());
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //    creature.OnDamaged(Owner, Skill);
-    //}
+        switch (Skill.SkillType)
+        {
+            case Define.ESkillType.IcicleArrow:
+            case Define.ESkillType.MonsterSkill_01:
+            case Define.ESkillType.SpinShot:
+            case Define.ESkillType.CircleShot:
+            case Define.ESkillType.PhotonStrike:
+                _numPenerations--;
+                if (_numPenerations < 0)
+                {
+                    _rigid.velocity = Vector3.zero;
+                    DestroyProjectile();
+                }
+                break;
+            case Define.ESkillType.Shuriken:
+            case Define.ESkillType.EnergyBolt:
+                _bounceCount--;
+                BounceProjectile(creature);
+                if (_bounceCount < 0)
+                {
+                    _rigid.velocity = Vector3.zero;
+                    DestroyProjectile();
+                }
+                break;
+            case Define.ESkillType.WindCutter:
+                _enteredColliderList.Add(creature);
+                if (_coDotDamage == null)
+                    _coDotDamage = StartCoroutine(CoStartDotDamage());
+                break;
+            default:
+                break;
+        }
+        creature.OnDamaged(Owner, Skill);
+    }
 
-    //void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    CreatureController target = collision.transform.GetComponent<CreatureController>();
-    //    if (target.IsValid() == false)
-    //        return;
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        CreatureController target = collision.transform.GetComponent<CreatureController>();
+        if (target.IsValid() == false)
+            return;
 
-    //    if (this.IsValid() == false)
-    //        return;
+        if (this.IsValid() == false)
+            return;
 
-    //    _enteredColliderList.Remove(target);
+        _enteredColliderList.Remove(target);
 
-    //    if (_enteredColliderList.Count == 0 && _coDotDamage != null)
-    //    {
-    //        StopCoroutine(_coDotDamage);
-    //        _coDotDamage = null;
-    //    }
-    //}
+        if (_enteredColliderList.Count == 0 && _coDotDamage != null)
+        {
+            StopCoroutine(_coDotDamage);
+            _coDotDamage = null;
+        }
+    }
 }
