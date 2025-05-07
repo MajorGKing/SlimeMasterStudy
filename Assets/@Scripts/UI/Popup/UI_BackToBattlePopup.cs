@@ -42,7 +42,7 @@ public class UI_BackToBattlePopup : UI_Popup
     private void OnClickConfirmButton(PointerEventData evt)
     {
         Managers.Sound.PlayButtonClick();
-        // 이전 플레이하던 게임으로 되돌아가기\
+        // 이전 플레이하던 게임으로 되돌아가기
         Managers.Scene.LoadScene(Define.EScene.GameScene, transform);
     }
 

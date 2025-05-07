@@ -32,8 +32,6 @@ public class ResourceManager
 
     public T Load<T>(string key) where T : Object
     {
-        Debug.Log($"ILHAK Key name is {key}");
-
         if (_resources.TryGetValue(key, out Object resource))
         {
             return resource as T;

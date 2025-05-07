@@ -267,6 +267,64 @@ public class ObjectManager
 
     public void Despawn<T>(T obj) where T : BaseController
     {
+        System.Type type = typeof(T);
+
+        if (type == typeof(PlayerController))
+        {
+            
+        }
+        else if (type == typeof(MonsterController))
+        {
+            Monsters.Remove(obj as MonsterController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(BossController))
+        {
+            Monsters.Remove(obj as MonsterController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(EliteController))
+        {
+            Monsters.Remove(obj as EliteController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
+        else if (type == typeof(GemController))
+        {
+            Gems.Remove(obj as GemController);
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as GemController);
+        }
+        else if (type == typeof(SoulController))
+        {
+            Souls.Remove(obj as SoulController);
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as SoulController);
+        }
+        else if (type == typeof(PotionController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as PotionController);
+        }
+        else if (type == typeof(MagnetController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as MagnetController);
+        }
+        else if (type == typeof(BombController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as BombController);
+        }
+        else if (type == typeof(EliteBoxController))
+        {
+            Managers.Resource.Destroy(obj.gameObject);
+            Managers.Game.CurrentMap.Grid.Remove(obj as EliteBoxController);
+        }
+        else if (type == typeof(ProjectileController))
+        {
+            Projectiles.Remove(obj as ProjectileController);
+            Managers.Resource.Destroy(obj.gameObject);
+        }
 
     }
 

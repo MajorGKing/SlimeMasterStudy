@@ -138,7 +138,7 @@ public class UIManager
 
         if (_popups.TryGetValue(name, out UI_Popup popup) == false)
         {
-            Debug.Log($"ILHAK name is : {name}");
+            //Debug.Log($"ILHAK name is : {name}");
             GameObject go = Managers.Resource.Instantiate(name);
             popup = Utils.GetOrAddComponent<T>(go);
             _popups[name] = popup;

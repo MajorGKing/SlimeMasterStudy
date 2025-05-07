@@ -63,7 +63,6 @@ public class GameScene : BaseScene
 
         _ui.GetComponent<Canvas>().sortingOrder = Define.UI_GAMESCENE_SORT_CLOSED;
 
-        // TODO ILHAK After UI_GameScene
         OnWaveStart = _ui.OnWaveStart;
         OnSecondChange = _ui.OnSecondChange;
         OnWaveEnd = _ui.OnWaveEnd;

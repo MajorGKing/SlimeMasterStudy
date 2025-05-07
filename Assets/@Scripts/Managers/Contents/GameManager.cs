@@ -691,10 +691,9 @@ public class GameManager
 
     public void ClearContinueData()
     {
-        // TODO ILHAK
-        //Managers.Game.SoulShopList.Clear();
-        //ContinueInfo.Clear();
-        //CurrentWaveIndex = 0;
+        Managers.Game.SoulShopList.Clear();
+        ContinueInfo.Clear();
+        CurrentWaveIndex = 0;
         SaveGame();
     }
 
