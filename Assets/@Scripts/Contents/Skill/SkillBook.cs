@@ -11,7 +11,7 @@ public class SkillBook : MonoBehaviour
 {
     [SerializeField]
     
-    public List<SkillBase> SkillList { get; private set; }  = new List<SkillBase>();
+    public List<SkillBase> SkillList { get; private set; } = new List<SkillBase>();
     public List<SequenceSkill> SequenceSkills { get; } = new List<SequenceSkill>();
     public List<SupportSkillData> LockedSupportSkills { get; } = new List<SupportSkillData>();
     public List<SupportSkillData> SupportSkills = new List<SupportSkillData>();

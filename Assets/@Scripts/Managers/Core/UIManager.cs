@@ -151,6 +151,8 @@ public class UIManager
         _pupupOrder++;
         popup.UICanvas.sortingOrder = _pupupOrder;
 
+        RefreshTimeScale();
+
         return popup as T;
     }
 
@@ -177,6 +179,7 @@ public class UIManager
         UI_Popup popup = _popupStack.Pop();
         popup.gameObject.SetActive(false);
         _pupupOrder--;
+        RefreshTimeScale();
     }
 
     public void CloseAllPopupUI()
@@ -195,6 +198,23 @@ public class UIManager
         CloseAllPopupUI();
         Time.timeScale = 1;
         SceneUI = null;
+    }
+
+    public void RefreshTimeScale()
+    {
+        if (SceneManager.GetActiveScene().name != Define.EScene.GameScene.ToString())
+        {
+            Time.timeScale = 1;
+            return;
+        }
+
+        if (_popupStack.Count > 0 || IsActiveSoulShop == true)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
+
+        DOTween.timeScale = 1;
+        OnTimeScaleChanged?.Invoke((int)Time.timeScale);
     }
 
     #region 임시

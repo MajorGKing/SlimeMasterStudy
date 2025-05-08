@@ -648,7 +648,6 @@ public class GameManager
 
     public void SaveGame()
     {
-        // TODO ILHAK
         if (Player != null)
         {
             _gameData.ContinueInfo.SavedBattleSkill = Player.Skills?.SavedBattleSkill;

@@ -78,6 +78,15 @@ public class UI_SkillSelectPopup : UI_Popup
     private void OnEnable()
     {
         PopupOpenAnimation(GetObject((int)GameObjects.ContentObject));
+
+        SetRecommendSkills();
+        List<SkillBase> activeSkills = Managers.Game.Player.Skills.SkillList.Where(skill => skill.IsLearnedSkill).ToList();
+
+        for (int i = 0; i < activeSkills.Count; i++)
+        {
+            SetCurrentSkill(i, activeSkills[i]);
+        }
+        Managers.Sound.Play(Define.ESound.Effect, "PopupOpen_SkillSelect");
     }
 
 #if UNITY_EDITOR

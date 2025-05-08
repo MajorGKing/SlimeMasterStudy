@@ -190,7 +190,7 @@ public abstract class CreatureController : BaseController
 
         isPlayDamagedAnim = true;
         DefaultMat = Managers.Resource.Load<Material>("CreatureDefaultMat");
-        HitEffectmat = Managers.Resource.Load<Material>("PaintWhite");
+        HitEffectmat = Managers.Resource.Load<Material>("DamagedEffectMat");
         // Damaged Animation
         CreatureSprite.material = HitEffectmat;
         yield return new WaitForSeconds(0.1f);
